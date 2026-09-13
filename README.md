@@ -186,7 +186,12 @@
 
 <br/>
 
-<!-- BESPOKE SLIME ARCADE FOOTER -->
+<!-- CINEMATIC RAIN GAZEBO FOOTER -->
 <div align="center">
-  <img src="./assets/footer.svg" width="100%" alt="Absorb Adapt Architect Slime Footer" />
+  <img src="./assets/shed.gif" width="100%" alt="The Garden of Words Rain Gazebo Footer" />
+  <br/><br/>
+  <p align="center">
+    <b>Absorb • Adapt • Architect</b><br/>
+    <i>Code is malleable. Systems architecture is permanent.</i>
+  </p>
 </div>
