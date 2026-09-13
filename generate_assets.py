@@ -366,7 +366,16 @@ def generate_all_assets():
         f.write(swaram)
 
     # -------------------------------------------------------------
-    # 4. GAMIFIED ARCADE TELEMETRY STATION (Live Real-Time Metrics)
+    # 4. COMMUNITY ROLES VISUAL CARDS (CSI, µLearn, IEEE)
+    # -------------------------------------------------------------
+    try:
+        from scripts.generate_roles import generate_community_roles_svg
+        generate_community_roles_svg()
+    except Exception as e:
+        print(f"Error generating community roles: {e}")
+
+    # -------------------------------------------------------------
+    # 5. GAMIFIED ARCADE TELEMETRY STATION (Live Real-Time Metrics)
     # -------------------------------------------------------------
     try:
         from scripts.update_telemetry import update_hud
@@ -375,7 +384,7 @@ def generate_all_assets():
         print(f"Error calling live update_hud: {e}")
 
     # -------------------------------------------------------------
-    # 5. BESPOKE SLIME ARCADE FOOTER (Crisp, zero generic vercel bloat)
+    # 6. BESPOKE SLIME ARCADE FOOTER (Crisp, zero generic vercel bloat)
     # -------------------------------------------------------------
     footer_svg = '''<svg width="900" height="130" viewBox="0 0 900 130" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>

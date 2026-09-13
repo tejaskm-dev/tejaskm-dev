@@ -151,20 +151,9 @@
   <img src="./assets/headers/04_roles.svg" width="100%" alt="04 Community Engagement &amp; Roles" />
 </p>
 
-```yaml
-Communities & Roles:
-  - Organization: CSI Club ASIET
-    Position: Tech Team Member
-    Focus: Technical event infrastructure, interactive student challenges (e.g. Operation Vault)
-
-  - Organization: µLearn ASIET
-    Position: Web Dev Interest Group (IG) Core
-    Focus: Mentoring peers, organizing build bootcamps, full-stack development culture
-
-  - Organization: IEEE SB ASIET
-    Position: Web Developer (WordPress)
-    Focus: Digital presence, society event portals, platform maintenance
-```
+<p align="center">
+  <img src="./assets/community_roles.svg" width="100%" alt="Communities &amp; Roles" />
+</p>
 
 <br/>
 
