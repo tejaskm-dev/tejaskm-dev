@@ -1,0 +1,44 @@
+<svg width="440" height="165" viewBox="0 0 440 165" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cardBg_swaram" x1="0" y1="0" x2="440" y2="165" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0c1410"/>
+      <stop offset="100%" stop-color="#070d0a"/>
+    </linearGradient>
+    <linearGradient id="cardBorder_swaram" x1="0" y1="0" x2="440" y2="165" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#34D399" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Card Frame -->
+  <rect x="1" y="1" width="438" height="163" rx="10" fill="url(#cardBg_swaram)" stroke="url(#cardBorder_swaram)" stroke-width="1.5"/>
+
+  <!-- Top Row: Repo Title -->
+  <g transform="translate(18, 18)">
+    <path d="M2 4C2 2.89543 2.89543 2 4 2H8.58579C9.11622 2 9.62493 2.21071 10 2.58579L12.4142 5H20C21.1046 5 22 5.89543 22 7V16C22 17.1046 21.1046 18 20 18H4C2.89543 18 2 17.1046 2 16V4Z" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1.5" stroke-linejoin="round"/>
+    <text x="30" y="15" fill="#FFFFFF" font-family="'Inter', -apple-system, sans-serif" font-size="15" font-weight="700">swaram</text>
+  </g>
+
+  <!-- Top Row: Badge -->
+  <g transform="translate(422, 18)">
+    <rect x="-114" y="0" width="114" height="20" rx="10" fill="#0c261b" stroke="#10B981" stroke-opacity="0.4"/>
+    <text x="-57" y="14" text-anchor="middle" fill="#34D399" font-family="'Inter', sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.5">VOICE PWA</text>
+  </g>
+
+  <!-- Project Title & Description -->
+  <text x="18" y="66" fill="#E2E8F0" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Swaram Accessibility PWA</text>
+  <text x="18" y="86" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="11">Voice-first accessible form-filling PWA designed for blind and low-vision</text>
+  <text x="18" y="104" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="11">users with real-time acoustic feedback and speech recognition.</text>
+
+  <!-- Divider Line -->
+  <line x1="18" y1="122" x2="422" y2="122" stroke="#10B981" stroke-opacity="0.15" stroke-width="1"/>
+
+  <!-- Bottom Row: Tech + Live URL -->
+  <g transform="translate(18, 142)">
+    <circle cx="5" cy="0" r="4" fill="#F7DF1E"/>
+    <text x="15" y="4" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="11">JavaScript</text>
+
+    <text x="404" y="4" text-anchor="end" fill="#10B981" font-family="'Inter', sans-serif" font-size="11" font-weight="600">swaram-three.vercel.app ↗</text>
+  </g>
+</svg>

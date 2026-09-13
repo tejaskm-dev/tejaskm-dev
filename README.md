@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- HERO BANNER -->
-<img src="./banner.png" alt="Tejas K M (Shinz) Banner" width="100%" />
+<img src="./banner.png" alt="Tejas K M (tejaskm-dev) Banner" width="100%" />
 
 <!-- ANIMATED TYPING HEADER -->
 <a href="https://readme-typing-svg.demolab.com">
@@ -24,23 +24,17 @@
   </a>
 </p>
 
-<!-- DETAILED SLIME CREATOR HUD -->
-<img src="./assets/slime-hud.svg" width="100%" alt="Slime Creator Station HUD" />
-
 </div>
 
-<br/>
+---
 
-<!-- SECTION 01: ABOUT & DIRECTIVE -->
-<p align="center">
-  <img src="./assets/headers/header-about.svg" width="100%" alt="01 • About &amp; Architectural Directive" />
-</p>
+### About & Architectural Directive
 
 > "A slime does not resist the geometry of its container — it adapts, absorbs complexity, and dissolves friction. Code is malleable; vision and systems architecture are permanent."
 
-I am **Tejas K M** (known online as **Shinz**), a first-year **BTech Computer Science & Engineering** student at **ASIET** (Class of 2029).
+I am **Tejas K M** (`tejaskm-dev`, or occasionally "shinz" when things crash in production), a first-year **BTech Computer Science & Engineering** student at **ASIET** (Class of 2029).
 
-Alongside building interactive software and parser engines, I serve as the **Class Representative** for my batch, engineer tools on the **CSI Club Tech Team**, and contribute actively across **µLearn** and **IEEE SB ASIET**. Based in Kerala, India, I operate at the intersection of systems architecture, rapid AI orchestration, and technical product execution.
+Alongside building interactive software, games, and parser engines, I serve as the **Class Representative** for my batch, engineer tools on the **CSI Club Tech Team**, and contribute actively across **µLearn** and **IEEE SB ASIET**. Based in Kerala, India, I operate at the intersection of systems architecture, rapid AI orchestration, and technical product execution.
 
 My north star is **technical product leadership with end-to-end ownership** — designing, directing, and shipping resilient software ventures that solve high-friction human problems.
 
@@ -52,53 +46,49 @@ I treat repetitive boilerplate as an artifact of legacy development. Instead, I 
 - **Deep Code Literacy**: Staying deeply conversant with language semantics, AST transformations, event loops, and relational schemas to debug complex race conditions and evaluate architectural trade-offs.
 - **Velocity with Taste**: AI accelerates execution speed; human taste, disciplined product intuition, and rigorous systems design determine product excellence.
 
-<br/>
+---
 
-<p align="center">
-  <img src="./assets/ascii-portrait.svg" width="100%" alt="Shinz ASCII Terminal Portrait" />
-</p>
+### Featured Projects
 
-<br/>
+<table width="100%" border="0">
+  <tr>
+    <td width="50%" align="center">
+      <a href="https://github.com/tejaskm-dev/skloop">
+        <img src="./assets/cards/skloop.svg" width="100%" alt="Skloop Repository Card" />
+      </a>
+    </td>
+    <td width="50%" align="center">
+      <a href="https://github.com/tejaskm-dev/personal_reader">
+        <img src="./assets/cards/personal_reader.svg" width="100%" alt="Aether Reader Repository Card" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="https://github.com/tejaskm-dev/NAME-sandbox">
+        <img src="./assets/cards/name_sandbox.svg" width="100%" alt="NAME Sandbox Repository Card" />
+      </a>
+    </td>
+    <td width="50%" align="center">
+      <a href="https://github.com/tejaskm-dev/bounce_celestial">
+        <img src="./assets/cards/bounce_celestial.svg" width="100%" alt="Bounce Celestial Repository Card" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <a href="https://github.com/Chai-T-ORG/swaram">
+        <img src="./assets/cards/swaram.svg" width="50%" alt="Swaram Accessibility PWA Card" />
+      </a>
+    </td>
+  </tr>
+</table>
 
-<!-- SECTION 02: FEATURED SYSTEMS & ENGINES -->
-<p align="center">
-  <img src="./assets/headers/header-projects.svg" width="100%" alt="02 • Featured Systems &amp; Engines" />
-</p>
+> **Side Challenge**: Also built **Operation Vault** — a mobile-first puzzle game engineered for the CSI Club induction event featuring multi-tier cipher mechanics and live event scoring.
 
-<p align="center">
-  <a href="https://github.com/tejaskm-dev/skloop">
-    <img src="./assets/cards/skloop.svg" width="100%" alt="Skloop Project Card" />
-  </a>
-</p>
+---
 
-<p align="center">
-  <a href="https://github.com/tejaskm-dev/aether-reader">
-    <img src="./assets/cards/aether.svg" width="100%" alt="Aether Reader Project Card" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/tejaskm-dev/name-sandbox">
-    <img src="./assets/cards/name-sandbox.svg" width="100%" alt="NAME Sandbox Project Card" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/tejaskm-dev/academic-integrity-engine">
-    <img src="./assets/cards/academic-engine.svg" width="100%" alt="Academic Integrity Engine Project Card" />
-  </a>
-</p>
-
-<p align="center">
-  <img src="./assets/cards/side-quests.svg" width="100%" alt="Side Quests: Swaram and Operation Vault" />
-</p>
-
-<br/>
-
-<!-- SECTION 03: TECH STACK -->
-<p align="center">
-  <img src="./assets/headers/header-stack.svg" width="100%" alt="03 • Absorbed Capabilities" />
-</p>
+### Tech Stack & Capabilities
 
 <div align="center">
 
@@ -110,21 +100,18 @@ I treat repetitive boilerplate as an artifact of legacy development. Instead, I 
 
 | Tier | Absorbed Technologies &amp; Capabilities |
 | :--- | :--- |
-| **Frontend &amp; UX** | React · Next.js 15 (App Router) · TypeScript · JavaScript · Tailwind CSS · Figma · PWA |
+| **Frontend &amp; 3D** | React · Next.js 15 (App Router) · Three.js · TypeScript · JavaScript · Tailwind CSS · Figma · PWA |
 | **Backend &amp; Realtime** | Node.js · Express · Colyseus (WebSockets) · Javalin · REST APIs |
 | **Languages** | TypeScript · JavaScript · Java · Python · SQL |
 | **Storage &amp; Auth** | Supabase · PostgreSQL · SQLite · IndexedDB |
 | **AI Tooling &amp; Leverage** | Claude Code · Antigravity · Groq / Llama · Prompt Directing · AST Metaprogramming |
-| **Workflow &amp; VCS** | Git · GitHub Actions · Linux · Turborepo |
+| **Workflow &amp; VCS** | Git · GitHub Actions · Linux · Turborepo · Vite |
 
 </div>
 
-<br/>
+---
 
-<!-- SECTION 04: ACTIVE FREQUENCIES -->
-<p align="center">
-  <img src="./assets/headers/header-activations.svg" width="100%" alt="04 • Active Frequencies" />
-</p>
+### Active Roles & Communities
 
 ```yaml
 Active Activations:
@@ -145,12 +132,9 @@ Active Activations:
     Focus: Digital presence, society event portals, platform maintenance
 ```
 
-<br/>
+---
 
-<!-- SECTION 05: TELEMETRY & ACTIVITY -->
-<p align="center">
-  <img src="./assets/headers/header-telemetry.svg" width="100%" alt="05 • Repo Telemetry &amp; Metrics" />
-</p>
+### Telemetry & Contribution Grid
 
 <div align="center">
 
@@ -181,7 +165,7 @@ Active Activations:
 
 </div>
 
-<br/>
+---
 
 <!-- WAVING SLIME FOOTER -->
 <div align="center">
