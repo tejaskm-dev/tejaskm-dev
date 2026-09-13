@@ -61,14 +61,6 @@ def generate_all_assets():
   <text x="38" y="22" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="800" letter-spacing="0.5">LINKEDIN</text>
 </svg>'''
 
-    x_svg = '''<svg width="90" height="34" viewBox="0 0 90 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="90" height="34" rx="8" fill="#0e241b" stroke="#10B981" stroke-width="1.2"/>
-  <g transform="translate(14, 9)">
-    <path d="M12.6 2H15L9.8 8L15.9 16H11L7.2 11L2.8 16H0.4L5.9 9.6L0.1 2H5.1L8.6 6.6L12.6 2ZM11.7 14.5H13L4.3 3.4H2.9L11.7 14.5Z" fill="#10B981"/>
-  </g>
-  <text x="40" y="22" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="800" letter-spacing="0.5">X</text>
-</svg>'''
-
     portfolio_svg = '''<svg width="140" height="34" viewBox="0 0 140 34" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="140" height="34" rx="8" fill="#0e241b" stroke="#10B981" stroke-width="1.2"/>
   <g transform="translate(12, 8)">
@@ -90,8 +82,6 @@ def generate_all_assets():
 
     with open('assets/badges/linkedin.svg', 'w') as f:
         f.write(linkedin_svg)
-    with open('assets/badges/x.svg', 'w') as f:
-        f.write(x_svg)
     with open('assets/badges/portfolio.svg', 'w') as f:
         f.write(portfolio_svg)
     with open('assets/badges/email.svg', 'w') as f:

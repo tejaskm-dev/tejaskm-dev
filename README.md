@@ -12,19 +12,15 @@
 
 <!-- CONTACT & SOCIAL BADGES -->
 <p align="center">
-  <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">
+  <a href="https://www.linkedin.com/in/tejas-km-73436237b/" target="_blank">
     <img src="./assets/badges/linkedin.svg" height="32" alt="LinkedIn" />
   </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://x.com/YOUR_TWITTER" target="_blank">
-    <img src="./assets/badges/x.svg" height="32" alt="Twitter" />
-  </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://YOUR_PORTFOLIO_URL" target="_blank">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://tejaskm-dev.vercel.app/" target="_blank">
     <img src="./assets/badges/portfolio.svg" height="32" alt="Portfolio" />
   </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="mailto:YOUR_EMAIL@example.com">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="mailto:tejaskm2508@gmail.com">
     <img src="./assets/badges/email.svg" height="32" alt="Email" />
   </a>
 </p>

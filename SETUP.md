@@ -8,12 +8,11 @@ This repository (`tejaskm-dev/tejaskm-dev`) powers your GitHub Profile README.
 
 To link your personal socials, update the placeholders in `README.md`:
 
-| Badge | Current Link | What to Replace |
-| :--- | :--- | :--- |
-| **LinkedIn** | `https://linkedin.com/in/YOUR_LINKEDIN` | Replace `YOUR_LINKEDIN` with your LinkedIn handle |
-| **X (Twitter)** | `https://x.com/YOUR_TWITTER` | Replace `YOUR_TWITTER` with your X handle |
-| **Portfolio** | `https://YOUR_PORTFOLIO_URL` | Replace `YOUR_PORTFOLIO_URL` with your portfolio domain |
-| **Email** | `mailto:YOUR_EMAIL@example.com` | Replace `YOUR_EMAIL@example.com` with your email address |
+| Badge | Destination |
+| :--- | :--- |
+| **LinkedIn** | `https://www.linkedin.com/in/tejas-km-73436237b/` |
+| **Portfolio** | `https://tejaskm-dev.vercel.app/` |
+| **Email** | `mailto:tejaskm2508@gmail.com` |
 
 ---
 
