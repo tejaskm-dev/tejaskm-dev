@@ -1,0 +1,30 @@
+<svg width="900" height="130" viewBox="0 0 900 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ftGrad" x1="0" y1="0" x2="900" y2="130" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0a120e"/>
+      <stop offset="50%" stop-color="#12251a"/>
+      <stop offset="100%" stop-color="#07110c"/>
+    </linearGradient>
+    <linearGradient id="slimeWave" x1="0" y1="0" x2="900" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#34D399" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="130" rx="16" fill="url(#ftGrad)" stroke="#1e382b" stroke-width="1.2"/>
+
+  <!-- Slime Cyber Grid Horizon Lines -->
+  <line x1="50" y1="110" x2="850" y2="110" stroke="#10B981" stroke-opacity="0.15" stroke-width="1"/>
+  <line x1="100" y1="95" x2="800" y2="95" stroke="#10B981" stroke-opacity="0.1" stroke-width="1"/>
+  <line x1="180" y1="82" x2="720" y2="82" stroke="#10B981" stroke-opacity="0.08" stroke-width="1"/>
+
+  <!-- Glowing Slime Wave Curve -->
+  <path d="M 50 45 Q 220 20, 450 40 T 850 35" stroke="url(#slimeWave)" stroke-width="3" fill="none"/>
+  <path d="M 50 45 Q 220 20, 450 40 T 850 35 L 850 45 L 50 45 Z" fill="#10B981" fill-opacity="0.05"/>
+
+  <!-- Main Motto -->
+  <text x="450" y="58" text-anchor="middle" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="18" font-weight="900" letter-spacing="3">ABSORB • ADAPT • ARCHITECT</text>
+  <text x="450" y="82" text-anchor="middle" fill="#34D399" font-family="'Inter', sans-serif" font-size="11.5" font-weight="600" letter-spacing="0.5">Code is malleable. Systems architecture is permanent.</text>
+  <text x="450" y="104" text-anchor="middle" fill="#64748B" font-family="'Inter', sans-serif" font-size="10" font-weight="500">Tejas K M (tejaskm-dev) • ASIET CSE • Class of 2029</text>
+</svg>

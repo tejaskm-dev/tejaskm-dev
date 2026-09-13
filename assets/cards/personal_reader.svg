@@ -1,44 +1,53 @@
-<svg width="440" height="165" viewBox="0 0 440 165" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="310" height="370" viewBox="0 0 310 370" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="cardBg_personal_reader" x1="0" y1="0" x2="440" y2="165" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#0c1410"/>
-      <stop offset="100%" stop-color="#070d0a"/>
+    <linearGradient id="aeBg" x1="0" y1="0" x2="310" y2="370" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#141918"/>
+      <stop offset="100%" stop-color="#0d1312"/>
     </linearGradient>
-    <linearGradient id="cardBorder_personal_reader" x1="0" y1="0" x2="440" y2="165" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#10B981" stop-opacity="0.6"/>
-      <stop offset="50%" stop-color="#34D399" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#059669" stop-opacity="0.5"/>
+    <linearGradient id="mangaSpine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0891b2"/>
     </linearGradient>
   </defs>
 
-  <!-- Card Frame -->
-  <rect x="1" y="1" width="438" height="163" rx="10" fill="url(#cardBg_personal_reader)" stroke="url(#cardBorder_personal_reader)" stroke-width="1.5"/>
+  <rect x="1" y="1" width="308" height="368" rx="20" fill="url(#aeBg)" stroke="#1e2c29" stroke-width="1.5"/>
 
-  <!-- Top Row: Repo Title -->
-  <g transform="translate(18, 18)">
-    <path d="M2 4C2 2.89543 2.89543 2 4 2H8.58579C9.11622 2 9.62493 2.21071 10 2.58579L12.4142 5H20C21.1046 5 22 5.89543 22 7V16C22 17.1046 21.1046 18 20 18H4C2.89543 18 2 17.1046 2 16V4Z" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1.5" stroke-linejoin="round"/>
-    <text x="30" y="15" fill="#FFFFFF" font-family="'Inter', -apple-system, sans-serif" font-size="15" font-weight="700">personal_reader</text>
+  <!-- 3D Manga Volume / E-Reader Device -->
+  <g transform="translate(24, 24)">
+    <rect x="6" y="4" width="46" height="60" rx="4" fill="#0e2a30"/>
+    <rect x="0" y="0" width="48" height="62" rx="4" fill="#153e47" stroke="#22d3ee" stroke-opacity="0.5" stroke-width="1"/>
+    <rect x="0" y="0" width="8" height="62" rx="2" fill="url(#mangaSpine)"/>
+    <line x1="14" y1="12" x2="40" y2="12" stroke="#22d3ee" stroke-width="1.5"/>
+    <line x1="14" y1="20" x2="32" y2="20" stroke="#38bdf8" stroke-opacity="0.6" stroke-width="1.5"/>
+    <circle cx="28" cy="38" r="10" fill="#083344" stroke="#22d3ee" stroke-width="1"/>
+    <polygon points="28,32 34,42 22,42" fill="#22d3ee"/>
+    <path d="M 40 54 Q 44 58, 48 62 L 40 62 Z" fill="#38bdf8" opacity="0.8"/>
   </g>
 
-  <!-- Top Row: Badge -->
-  <g transform="translate(422, 18)">
-    <rect x="-114" y="0" width="114" height="20" rx="10" fill="#0c261b" stroke="#10B981" stroke-opacity="0.4"/>
-    <text x="-57" y="14" text-anchor="middle" fill="#34D399" font-family="'Inter', sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.5">MANGA PWA</text>
+  <!-- Status Pill -->
+  <g transform="translate(206, 24)">
+    <rect x="0" y="0" width="80" height="22" rx="11" fill="#0e282c" stroke="#22d3ee" stroke-opacity="0.6"/>
+    <circle cx="12" cy="11" r="3.5" fill="#22d3ee"/>
+    <text x="46" y="15" text-anchor="middle" fill="#22d3ee" font-family="'Inter', sans-serif" font-size="9" font-weight="700" letter-spacing="0.5">MANGA PWA</text>
   </g>
 
-  <!-- Project Title & Description -->
-  <text x="18" y="66" fill="#E2E8F0" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Aether Reader PWA</text>
-  <text x="18" y="86" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="11">Full-stack manga and manhwa reader PWA with multi-source proxy scrapers,</text>
-  <text x="18" y="104" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="11">MAL-style reading tracking, velocity analytics, and offline caching.</text>
+  <!-- Title & Subtitle -->
+  <text x="24" y="145" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="28" font-weight="800" letter-spacing="-0.5">aether reader</text>
+  <text x="24" y="172" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Manga &amp; Manhwa Engine</text>
+
+  <!-- Description -->
+  <text x="24" y="210" fill="#E2E8F0" font-family="'Inter', sans-serif" font-size="12" font-weight="500">Zero-distraction reading engine.</text>
+  <text x="24" y="230" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="11.5">Multi-source proxy adapters &amp; telemetry.</text>
+  <text x="24" y="250" fill="#64748B" font-family="'Inter', sans-serif" font-size="11">MAL tracking, velocity &amp; offline PWA.</text>
 
   <!-- Divider Line -->
-  <line x1="18" y1="122" x2="422" y2="122" stroke="#10B981" stroke-opacity="0.15" stroke-width="1"/>
+  <line x1="24" y1="295" x2="286" y2="295" stroke="#FFFFFF" stroke-opacity="0.08"/>
 
-  <!-- Bottom Row: Tech + Live URL -->
-  <g transform="translate(18, 142)">
-    <circle cx="5" cy="0" r="4" fill="#3178C6"/>
-    <text x="15" y="4" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="11">TypeScript</text>
-
-    <text x="404" y="4" text-anchor="end" fill="#10B981" font-family="'Inter', sans-serif" font-size="11" font-weight="600">aether-reader.vercel.app ↗</text>
+  <!-- Bottom Row -->
+  <g transform="translate(24, 325)">
+    <circle cx="4" cy="0" r="4" fill="#38bdf8"/>
+    <text x="14" y="4" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="11">TypeScript</text>
+    <text x="262" y="4" text-anchor="end" fill="#22d3ee" font-family="'Inter', sans-serif" font-size="11" font-weight="600">aether-reader ↗</text>
+    <path d="M 175 10 Q 218 13, 262 10" stroke="#22d3ee" stroke-width="1.5" stroke-linecap="round" fill="none"/>
   </g>
 </svg>
