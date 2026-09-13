@@ -1,0 +1,86 @@
+<svg width="900" height="270" viewBox="0 0 900 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cardBg2" x1="0" y1="0" x2="900" y2="270" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#051012"/>
+      <stop offset="60%" stop-color="#08181c"/>
+      <stop offset="100%" stop-color="#040e10"/>
+    </linearGradient>
+    <linearGradient id="cardBorder2" x1="0" y1="0" x2="900" y2="270" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00F5D4" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#00FF66" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.8"/>
+    </linearGradient>
+    <filter id="glow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="1" y="1" width="898" height="268" rx="14" fill="url(#cardBg2)" stroke="url(#cardBorder2)" stroke-width="1.5"/>
+
+  <!-- Top Bar -->
+  <g transform="translate(30, 24)">
+    <rect x="0" y="0" width="76" height="22" rx="4" fill="#041f22" stroke="#00F5D4" stroke-opacity="0.6"/>
+    <text x="38" y="15" text-anchor="middle" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="11" font-weight="700" letter-spacing="1">SYS::02</text>
+    
+    <rect x="88" y="0" width="220" height="22" rx="4" fill="#041f22" stroke="#00FF66" stroke-opacity="0.5"/>
+    <text x="198" y="15" text-anchor="middle" fill="#00FF66" font-family="'Fira Code', monospace" font-size="10" font-weight="600" letter-spacing="0.5">SHIPPED // PRIVATE ARCHITECTURE</text>
+  </g>
+
+  <!-- Title & Subtitle -->
+  <text x="30" y="80" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="26" font-weight="800" letter-spacing="-0.5">Aether Reader</text>
+  <text x="210" y="78" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="13" font-weight="600">// Full-Stack Manga &amp; Manhwa PWA</text>
+  <text x="30" y="102" fill="#8899A6" font-family="'Inter', sans-serif" font-size="13">High-speed distraction-free reader engine aggregating multi-scanlation feeds with telemetry.</text>
+
+  <!-- Feature Points -->
+  <g transform="translate(30, 130)">
+    <text x="0" y="0" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="13" font-weight="700">&gt;&gt;</text>
+    <text x="24" y="0" fill="#E2E8F0" font-family="'Inter', sans-serif" font-size="13" font-weight="600">Source-Adapter Pattern:</text>
+    <text x="210" y="0" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="13">Decoupled Express scrapers abstracting multiple upstream scanlation sources</text>
+
+    <text x="0" y="24" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="13" font-weight="700">&gt;&gt;</text>
+    <text x="24" y="24" fill="#E2E8F0" font-family="'Inter', sans-serif" font-size="13" font-weight="600">MAL-Style Tracking:</text>
+    <text x="180" y="24" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="13">Chapter bookmarking, reading velocity telemetry &amp; full analytics dashboard</text>
+
+    <text x="0" y="48" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="13" font-weight="700">&gt;&gt;</text>
+    <text x="24" y="48" fill="#E2E8F0" font-family="'Inter', sans-serif" font-size="13" font-weight="600">Offline Resilience:</text>
+    <text x="175" y="48" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="13">PWA Service Worker caching + client-side IndexedDB with Supabase cloud sync</text>
+  </g>
+
+  <!-- Bottom Tech Stack Pills -->
+  <g transform="translate(30, 218)">
+    <rect x="0" y="0" width="86" height="24" rx="12" fill="#072328" stroke="#00F5D4" stroke-opacity="0.3"/>
+    <text x="43" y="16" text-anchor="middle" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="11">Next.js 15</text>
+
+    <rect x="94" y="0" width="94" height="24" rx="12" fill="#072328" stroke="#00F5D4" stroke-opacity="0.3"/>
+    <text x="141" y="16" text-anchor="middle" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="11">TypeScript</text>
+
+    <rect x="196" y="0" width="76" height="24" rx="12" fill="#072328" stroke="#00F5D4" stroke-opacity="0.3"/>
+    <text x="234" y="16" text-anchor="middle" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="11">Tailwind</text>
+
+    <rect x="280" y="0" width="76" height="24" rx="12" fill="#072328" stroke="#00F5D4" stroke-opacity="0.3"/>
+    <text x="318" y="16" text-anchor="middle" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="11">Express</text>
+
+    <rect x="364" y="0" width="80" height="24" rx="12" fill="#072328" stroke="#00F5D4" stroke-opacity="0.3"/>
+    <text x="404" y="16" text-anchor="middle" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="11">Supabase</text>
+  </g>
+
+  <!-- Right Visual: Layered Book/Reader Wireframe -->
+  <g transform="translate(730, 85)">
+    <rect x="0" y="0" width="100" height="120" rx="8" fill="#072328" stroke="#00F5D4" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect x="15" y="-12" width="100" height="120" rx="8" fill="#0a3239" stroke="#00FF66" stroke-opacity="0.6" stroke-width="1.5"/>
+    <line x1="30" y1="15" x2="95" y2="15" stroke="#00FF66" stroke-opacity="0.8" stroke-width="2"/>
+    <line x1="30" y1="30" x2="80" y2="30" stroke="#00F5D4" stroke-opacity="0.5" stroke-width="1.5"/>
+    <line x1="30" y1="45" x2="90" y2="45" stroke="#00F5D4" stroke-opacity="0.5" stroke-width="1.5"/>
+    <line x1="30" y1="60" x2="70" y2="60" stroke="#00F5D4" stroke-opacity="0.5" stroke-width="1.5"/>
+    <circle cx="85" cy="85" r="14" fill="#00FF66" fill-opacity="0.2" filter="url(#glow2)"/>
+    <circle cx="85" cy="85" r="7" fill="#00F5D4"/>
+  </g>
+
+  <!-- Role Stamp -->
+  <text x="640" y="235" text-anchor="end" fill="#8899A6" font-family="'Fira Code', monospace" font-size="11">ROLE: CREATOR &amp; ARCHITECT</text>
+  <text x="655" y="235" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="11">-&gt;</text>
+</svg>
