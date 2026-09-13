@@ -1,57 +1,46 @@
-# 🧪 Setup & Configuration Guide
+# Setup & Customization Guide
 
-This repository (`tejaskm-dev/tejaskm-dev`) powers your GitHub Profile README. Before pushing changes or after your initial push, replace the placeholders listed below.
+This repository (`tejaskm-dev/tejaskm-dev`) powers your GitHub Profile README.
 
 ---
 
-## 🔍 Placeholders to Replace
+## Social Badges Quick Reference
 
-Open `README.md` and use your editor's **Find and Replace** (`Cmd + F` or `Ctrl + H`):
+To link your personal socials, update the placeholders in `README.md`:
 
-| Placeholder | Where It Appears | Description / Example |
+| Badge | Current Link | What to Replace |
 | :--- | :--- | :--- |
-| `YOUR_GITHUB_USERNAME` | Snake SVG links, Stats cards, Trophies, Activity graph | Your GitHub handle (e.g. `tejaskm-dev`) |
-| `YOUR_LINKEDIN` | Top contact badge | Your LinkedIn handle (e.g. `tejas-k-m`) |
-| `YOUR_TWITTER` | Top contact badge | Your X/Twitter username (e.g. `shinz_dev`) |
-| `YOUR_PORTFOLIO_URL` | Top contact badge | Your personal website/portfolio URL |
-| `YOUR_EMAIL@example.com` | Top contact badge | Your contact email address |
-| `YOUR_GITHUB_USERNAME/skloop` | Featured Project 01 | Link to Skloop repository or live product |
-| `YOUR_GITHUB_USERNAME/aether-reader` | Featured Project 02 | Link to Aether Reader repository/docs |
-| `YOUR_GITHUB_USERNAME/name-sandbox` | Featured Project 03 | Link to NAME Sandbox repository/demo |
-| `YOUR_GITHUB_USERNAME/academic-integrity-engine` | Featured Project 04 | Link to Academic Integrity Engine repo |
-
-> **Quick Tip:** If you want to do a fast global replacement for your username:
-> Replace all instances of `YOUR_GITHUB_USERNAME` with your GitHub username (e.g. `tejaskm-dev`).
+| **LinkedIn** | `https://linkedin.com/in/YOUR_LINKEDIN` | Replace `YOUR_LINKEDIN` with your LinkedIn username |
+| **X (Twitter)** | `https://x.com/YOUR_TWITTER` | Replace `YOUR_TWITTER` with your X handle |
+| **Portfolio** | `https://YOUR_PORTFOLIO_URL` | Replace `YOUR_PORTFOLIO_URL` with your portfolio domain |
+| **Email** | `mailto:YOUR_EMAIL@example.com` | Replace `YOUR_EMAIL@example.com` with your address |
 
 ---
 
-## 🐍 GitHub Action: Contribution Snake Setup
+## Visual Assets & Project Cards
 
-Your repo includes `.github/workflows/snake.yml`, which automatically builds an animated snake feeding on your contribution grid every 24 hours and deploys SVGs to an isolated `output` branch.
+All visual project cards and headers are rendered via local SVGs stored in the `assets/` directory:
+- `assets/slime-hud.svg` — Animated pulsing cyber-slime telemetry terminal with scanning beam
+- `assets/cards/skloop.svg` — Visual card for Skloop (In Active Development)
+- `assets/cards/aether.svg` — Visual card for Aether Reader PWA
+- `assets/cards/name-sandbox.svg` — Visual card for NAME Sandbox & AST rule compiler
+- `assets/cards/academic-engine.svg` — Visual card for the Academic Integrity Engine
+- `assets/cards/side-quests.svg` — Visual dual card for Swaram and Operation Vault
+- `assets/headers/` — Custom neon section dividers (`header-about.svg`, `header-projects.svg`, etc.)
 
-### 1. Enable GitHub Actions Write Permissions (Required)
-GitHub Actions must have permission to write and create the `output` branch:
-1. Go to your repository on GitHub: `https://github.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME`
-2. Navigate to **Settings** → **Actions** → **General**.
-3. Scroll down to **Workflow permissions**.
-4. Select **Read and write permissions**.
-5. Click **Save**.
-
-### 2. Trigger the Initial Run
-1. Go to the **Actions** tab in your repository.
-2. Under "Workflows" on the left, click **Generate Contribution Snake**.
-3. Click the **Run workflow** dropdown on the right and select **Run workflow**.
-4. Once completed (takes ~30–45 seconds), an `output` branch will automatically be created containing:
-   - `github-contribution-grid-snake.svg`
-   - `github-contribution-grid-snake-dark.svg`
-5. The `<picture>` element in your `README.md` will instantly render the animated snake in both light and dark mode!
+To re-generate or adjust any card text or styling, edit `generate_assets.py` and execute:
+```bash
+python3 generate_assets.py
+git add assets/
+git commit -m "chore: update visual cards"
+git push origin main
+```
 
 ---
 
-## 🎨 Slime Theme Customization (Optional)
+## Contribution Snake Workflow
 
-The profile is themed around an adaptable, fluid bio-slime / cyber-slime aesthetic:
-- **Banner**: Displays `banner.png` directly from the repo root.
-- **Typing Header**: Configured in `https://readme-typing-svg.demolab.com` with `#00FF66` slime green.
-- **Color Accents**: Widgets and telemetry use neon slime green (`#00FF66`, `#00FF7F`) on deep dark backdrops (`#0d1117`).
-- **Footer**: Animated wave footer rendered by `capsule-render` with a multi-stop emerald/slime gradient.
+The `.github/workflows/snake.yml` workflow automatically runs daily at `00:00 UTC` and deploys SVGs to the `output` branch.
+
+- **Output Branch Status:** Active and populated with `github-contribution-grid-snake-dark.svg` and `github-contribution-grid-snake.svg`.
+- **Permissions:** If you ever reconfigure your GitHub repository permissions, ensure **Settings → Actions → General → Workflow permissions** is set to **Read and write permissions**.
