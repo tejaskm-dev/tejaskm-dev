@@ -12,8 +12,8 @@ def generate_all_assets():
         ("01_directive.svg", "01", "ARCHITECTURAL DIRECTIVE &amp; BIO", "#10B981", "#052e16", "PHILOSOPHY"),
         ("02_projects.svg", "02", "FEATURED ARTIFACTS &amp; BUILDS", "#22d3ee", "#083344", "PORTFOLIO"),
         ("03_techstack.svg", "03", "CORE TECH &amp; DIRECTIVE STACK", "#38bdf8", "#082f49", "CAPABILITIES"),
-        ("04_roles.svg", "04", "ACTIVE ACTIVATIONS &amp; ROLES", "#facc15", "#422006", "COMMUNITIES"),
-        ("05_telemetry.svg", "05", "ARCADE TELEMETRY &amp; ACTIVITY", "#34D399", "#064e3b", "GRID HUD"),
+        ("04_roles.svg", "04", "COMMUNITY ENGAGEMENT &amp; ROLES", "#facc15", "#422006", "COMMUNITIES"),
+        ("05_telemetry.svg", "05", "ARCADE TELEMETRY &amp; METRICS", "#34D399", "#064e3b", "TELEMETRY"),
     ]
 
     for filename, num, title, color, bg_pill, tag in headers:
@@ -98,7 +98,7 @@ def generate_all_assets():
         f.write(email_svg)
 
     # -------------------------------------------------------------
-    # 3. PICTURE-3 TACTILE PROJECT CARDS (310x370 with 3D models)
+    # 3. PICTURE-3 TACTILE PROJECT CARDS (Clean static category pills, zero dots)
     # -------------------------------------------------------------
     # Skloop
     skloop = '''<svg width="310" height="370" viewBox="0 0 310 370" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -133,11 +133,10 @@ def generate_all_assets():
     <polygon points="54,34 56,38 60,38 57,41 58,45 54,42 50,45 51,41 48,38 52,38" fill="#facc15"/>
   </g>
 
-  <!-- Status Pill -->
-  <g transform="translate(196, 24)">
-    <rect x="0" y="0" width="90" height="22" rx="11" fill="#0e2a1e" stroke="#10B981" stroke-opacity="0.6"/>
-    <circle cx="12" cy="11" r="3.5" fill="#34D399"/>
-    <text x="50" y="15" text-anchor="middle" fill="#34D399" font-family="'Inter', sans-serif" font-size="9" font-weight="700" letter-spacing="0.5">ACTIVE BUILD</text>
+  <!-- Clean Category Pill (No dot, No pulse, No fake active) -->
+  <g transform="translate(180, 24)">
+    <rect x="0" y="0" width="106" height="22" rx="11" fill="#0e2a1e" stroke="#10B981" stroke-opacity="0.6"/>
+    <text x="53" y="15" text-anchor="middle" fill="#34D399" font-family="'Inter', sans-serif" font-size="8.5" font-weight="800" letter-spacing="0.5">EDTECH PLATFORM</text>
   </g>
 
   <!-- Title & Subtitle -->
@@ -188,11 +187,10 @@ def generate_all_assets():
     <path d="M 40 54 Q 44 58, 48 62 L 40 62 Z" fill="#38bdf8" opacity="0.8"/>
   </g>
 
-  <!-- Status Pill -->
-  <g transform="translate(206, 24)">
-    <rect x="0" y="0" width="80" height="22" rx="11" fill="#0e282c" stroke="#22d3ee" stroke-opacity="0.6"/>
-    <circle cx="12" cy="11" r="3.5" fill="#22d3ee"/>
-    <text x="46" y="15" text-anchor="middle" fill="#22d3ee" font-family="'Inter', sans-serif" font-size="9" font-weight="700" letter-spacing="0.5">MANGA PWA</text>
+  <!-- Clean Category Pill -->
+  <g transform="translate(196, 24)">
+    <rect x="0" y="0" width="90" height="22" rx="11" fill="#0e282c" stroke="#22d3ee" stroke-opacity="0.6"/>
+    <text x="45" y="15" text-anchor="middle" fill="#22d3ee" font-family="'Inter', sans-serif" font-size="8.5" font-weight="800" letter-spacing="0.5">MANGA ENGINE</text>
   </g>
 
   <!-- Title & Subtitle -->
@@ -239,11 +237,10 @@ def generate_all_assets():
     </g>
   </g>
 
-  <!-- Status Pill -->
+  <!-- Clean Category Pill -->
   <g transform="translate(200, 24)">
     <rect x="0" y="0" width="86" height="22" rx="11" fill="#0e2a1e" stroke="#10B981" stroke-opacity="0.6"/>
-    <circle cx="12" cy="11" r="3.5" fill="#34D399"/>
-    <text x="49" y="15" text-anchor="middle" fill="#34D399" font-family="'Inter', sans-serif" font-size="9" font-weight="700" letter-spacing="0.5">AST ENGINE</text>
+    <text x="43" y="15" text-anchor="middle" fill="#34D399" font-family="'Inter', sans-serif" font-size="8.5" font-weight="800" letter-spacing="0.5">AST ENGINE</text>
   </g>
 
   <!-- Title & Subtitle -->
@@ -291,11 +288,10 @@ def generate_all_assets():
     <ellipse cx="38" cy="30" rx="26" ry="8" transform="rotate(-20 38 30)" stroke="#22d3ee" stroke-width="2" fill="none"/>
   </g>
 
-  <!-- Status Pill -->
+  <!-- Clean Category Pill -->
   <g transform="translate(196, 24)">
     <rect x="0" y="0" width="90" height="22" rx="11" fill="#0d242c" stroke="#38bdf8" stroke-opacity="0.6"/>
-    <circle cx="12" cy="11" r="3.5" fill="#38bdf8"/>
-    <text x="50" y="15" text-anchor="middle" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="9" font-weight="700" letter-spacing="0.5">3D ARCADE</text>
+    <text x="45" y="15" text-anchor="middle" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="8.5" font-weight="800" letter-spacing="0.5">3D PHYSICS</text>
   </g>
 
   <!-- Title & Subtitle -->
@@ -341,11 +337,10 @@ def generate_all_assets():
     <rect x="52" y="22" width="4" height="24" rx="2" fill="#facc15"/>
   </g>
 
-  <!-- Status Pill -->
+  <!-- Clean Category Pill -->
   <g transform="translate(202, 24)">
     <rect x="0" y="0" width="84" height="22" rx="11" fill="#29260d" stroke="#facc15" stroke-opacity="0.6"/>
-    <circle cx="12" cy="11" r="3.5" fill="#facc15"/>
-    <text x="48" y="15" text-anchor="middle" fill="#facc15" font-family="'Inter', sans-serif" font-size="9" font-weight="700" letter-spacing="0.5">VOICE PWA</text>
+    <text x="42" y="15" text-anchor="middle" fill="#facc15" font-family="'Inter', sans-serif" font-size="8.5" font-weight="800" letter-spacing="0.5">VOICE PWA</text>
   </g>
 
   <!-- Title & Subtitle -->
@@ -381,7 +376,7 @@ def generate_all_assets():
         f.write(swaram)
 
     # -------------------------------------------------------------
-    # 4. GAMIFIED ARCADE TELEMETRY STATION (Picture-3 Inspired Fun Visuals!)
+    # 4. GAMIFIED ARCADE TELEMETRY STATION (Zero blinking dots, zero fake active)
     # -------------------------------------------------------------
     arcade_telemetry_svg = '''<svg width="900" height="260" viewBox="0 0 900 260" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
@@ -410,12 +405,11 @@ def generate_all_assets():
     <text x="68" y="22" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="16" font-weight="900" letter-spacing="-0.3">ARCADE TELEMETRY STATION</text>
     <text x="68" y="38" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="11.5" font-weight="500">Player: tejaskm-dev • Level 01 Architect • ASIET CSE (2025-2029)</text>
 
-    <!-- Active Quest Pill -->
+    <!-- Directive Focus Bar (No fake dots, no blinking) -->
     <g transform="translate(0, 54)">
       <rect width="470" height="34" rx="8" fill="#10251c" stroke="#10B981" stroke-opacity="0.4" stroke-width="1"/>
-      <circle cx="16" cy="17" r="4" fill="#34D399"/>
-      <text x="30" y="21" fill="#34D399" font-family="'Inter', sans-serif" font-size="10.5" font-weight="800" letter-spacing="0.5">CURRENT QUEST:</text>
-      <text x="135" y="21" fill="#F1F5F9" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Building Skloop • Directing AI Engines • AST Sandbox</text>
+      <text x="16" y="21" fill="#34D399" font-family="'Inter', sans-serif" font-size="10" font-weight="900" letter-spacing="0.5">DIRECTIVE:</text>
+      <text x="88" y="21" fill="#F1F5F9" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Building Skloop • Directing AI Engines • AST Sandbox</text>
     </g>
 
     <!-- Telemetry Meters / Score Tickers -->
@@ -529,7 +523,7 @@ def generate_all_assets():
     with open('assets/footer.svg', 'w') as f:
         f.write(footer_svg)
 
-    print("Successfully generated all assets!")
+    print("Successfully generated all assets without blinking dots or pulses!")
 
 if __name__ == '__main__':
     generate_all_assets()

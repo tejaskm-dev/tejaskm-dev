@@ -1,0 +1,386 @@
+<svg width="900" height="260" viewBox="0 0 900 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    
+    <pattern id="ambientGrid" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="10" height="10" rx="2.5" fill="#10B981" fill-opacity="0.06"/>
+      <rect x="14" y="0" width="10" height="10" rx="2.5" fill="#10B981" fill-opacity="0.03"/>
+      <rect x="0" y="14" width="10" height="10" rx="2.5" fill="#10B981" fill-opacity="0.04"/>
+      <rect x="14" y="14" width="10" height="10" rx="2.5" fill="#34D399" fill-opacity="0.07"/>
+    </pattern>
+    
+    <linearGradient id="sensorBg" x1="0" y1="0" x2="900" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#121814"/>
+      <stop offset="100%" stop-color="#0a100c"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+    
+    .sensor-cell {
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+    .sensor-cell:hover rect:first-child {
+      fill: #19261e;
+      stroke: #34D399;
+      stroke-width: 1.5;
+      filter: drop-shadow(0 0 10px rgba(52, 211, 153, 0.4));
+    }
+    .grid-layer {
+      animation: driftGrid 28s linear infinite;
+    }
+    @keyframes driftGrid {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(-28px, -28px); }
+    }
+    .pulse-radar {
+      animation: radarPulse 2s infinite ease-in-out;
+    }
+    @keyframes radarPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.2); }
+    }
+  </style>
+
+  <!-- Chassis -->
+  <rect x="1" y="1" width="898" height="258" rx="16" fill="url(#sensorBg)" stroke="#1e2c24" stroke-width="1.5"/>
+
+  <!-- Ambient Grid -->
+  <g class="grid-layer">
+    <rect x="-28" y="-28" width="956" height="316" fill="url(#ambientGrid)"/>
+  </g>
+
+  <!-- Header Sensor Status -->
+  <g transform="translate(24, 22)">
+    <circle cx="10" cy="12" r="4" fill="#34D399" class="pulse-radar"/>
+    <circle cx="10" cy="12" r="8" stroke="#34D399" stroke-opacity="0.4" stroke-width="1"/>
+    
+    <text x="26" y="16" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="13" font-weight="900" letter-spacing="1">SKILL PANEL · SENSOR ARRAY MATRIX</text>
+    
+    <!-- Telemetry Readout -->
+    <text x="440" y="16" fill="#94A3B8" font-family="'Fira Code', monospace" font-size="10.5">14 ACTIVE SUBSYSTEMS • SCAN FREQ: 60Hz • TELEMETRY NOMINAL</text>
+  </g>
+
+  <!-- Sensor Grid (14 Interactive Heatmap Nodes) -->
+  
+    <g class="sensor-cell" style="animation-delay: 0.0s;" transform="translate(24, 70)">
+      <rect width="116" height="74" rx="8" fill="#131b16" stroke="#1e2c24" stroke-width="1.2"/>
+      
+      <!-- Mini Activity Heatmap Dots -->
+      <g transform="translate(10, 10)">
+        <rect x="0" y="0" width="7" height="7" rx="1.5" fill="#10B981" fill-opacity="0.8"/>
+        <rect x="10" y="0" width="7" height="7" rx="1.5" fill="#34D399"/>
+        <rect x="20" y="0" width="7" height="7" rx="1.5" fill="#006d32"/>
+        <rect x="30" y="0" width="7" height="7" rx="1.5" fill="#26a641"/>
+      </g>
+      
+      <!-- Sensor Value Pill -->
+      <text x="106" y="18" text-anchor="end" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="9" font-weight="700">71%</text>
+
+      <!-- Tech Name & Tag -->
+      <text x="10" y="44" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="800">TYPESCRIPT</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Fira Code', monospace" font-size="7.5" font-weight="600" letter-spacing="0.3">CORE SYNTAX</text>
+
+      <!-- Bottom micro-gauge -->
+      <rect x="10" y="65" width="96" height="2" rx="1" fill="#1e2c24"/>
+      <rect x="10" y="65" width="68" height="2" rx="1" fill="#38bdf8"/>
+    </g>
+    <g class="sensor-cell" style="animation-delay: 0.1s;" transform="translate(146, 70)">
+      <rect width="116" height="74" rx="8" fill="#131b16" stroke="#1e2c24" stroke-width="1.2"/>
+      
+      <!-- Mini Activity Heatmap Dots -->
+      <g transform="translate(10, 10)">
+        <rect x="0" y="0" width="7" height="7" rx="1.5" fill="#10B981" fill-opacity="0.8"/>
+        <rect x="10" y="0" width="7" height="7" rx="1.5" fill="#34D399"/>
+        <rect x="20" y="0" width="7" height="7" rx="1.5" fill="#006d32"/>
+        <rect x="30" y="0" width="7" height="7" rx="1.5" fill="#26a641"/>
+      </g>
+      
+      <!-- Sensor Value Pill -->
+      <text x="106" y="18" text-anchor="end" fill="#facc15" font-family="'Fira Code', monospace" font-size="9" font-weight="700">89%</text>
+
+      <!-- Tech Name & Tag -->
+      <text x="10" y="44" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="800">JAVASCRIPT</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Fira Code', monospace" font-size="7.5" font-weight="600" letter-spacing="0.3">ESNEXT RUNTIME</text>
+
+      <!-- Bottom micro-gauge -->
+      <rect x="10" y="65" width="96" height="2" rx="1" fill="#1e2c24"/>
+      <rect x="10" y="65" width="85" height="2" rx="1" fill="#facc15"/>
+    </g>
+    <g class="sensor-cell" style="animation-delay: 0.2s;" transform="translate(268, 70)">
+      <rect width="116" height="74" rx="8" fill="#131b16" stroke="#1e2c24" stroke-width="1.2"/>
+      
+      <!-- Mini Activity Heatmap Dots -->
+      <g transform="translate(10, 10)">
+        <rect x="0" y="0" width="7" height="7" rx="1.5" fill="#10B981" fill-opacity="0.8"/>
+        <rect x="10" y="0" width="7" height="7" rx="1.5" fill="#34D399"/>
+        <rect x="20" y="0" width="7" height="7" rx="1.5" fill="#006d32"/>
+        <rect x="30" y="0" width="7" height="7" rx="1.5" fill="#26a641"/>
+      </g>
+      
+      <!-- Sensor Value Pill -->
+      <text x="106" y="18" text-anchor="end" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="9" font-weight="700">94%</text>
+
+      <!-- Tech Name & Tag -->
+      <text x="10" y="44" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="800">REACT 19</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Fira Code', monospace" font-size="7.5" font-weight="600" letter-spacing="0.3">VDOM &amp; HOOKS</text>
+
+      <!-- Bottom micro-gauge -->
+      <rect x="10" y="65" width="96" height="2" rx="1" fill="#1e2c24"/>
+      <rect x="10" y="65" width="90" height="2" rx="1" fill="#38bdf8"/>
+    </g>
+    <g class="sensor-cell" style="animation-delay: 0.3s;" transform="translate(390, 70)">
+      <rect width="116" height="74" rx="8" fill="#131b16" stroke="#1e2c24" stroke-width="1.2"/>
+      
+      <!-- Mini Activity Heatmap Dots -->
+      <g transform="translate(10, 10)">
+        <rect x="0" y="0" width="7" height="7" rx="1.5" fill="#10B981" fill-opacity="0.8"/>
+        <rect x="10" y="0" width="7" height="7" rx="1.5" fill="#34D399"/>
+        <rect x="20" y="0" width="7" height="7" rx="1.5" fill="#006d32"/>
+        <rect x="30" y="0" width="7" height="7" rx="1.5" fill="#26a641"/>
+      </g>
+      
+      <!-- Sensor Value Pill -->
+      <text x="106" y="18" text-anchor="end" fill="#ffffff" font-family="'Fira Code', monospace" font-size="9" font-weight="700">92%</text>
+
+      <!-- Tech Name & Tag -->
+      <text x="10" y="44" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="800">NEXT.JS 15</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Fira Code', monospace" font-size="7.5" font-weight="600" letter-spacing="0.3">APP ROUTER</text>
+
+      <!-- Bottom micro-gauge -->
+      <rect x="10" y="65" width="96" height="2" rx="1" fill="#1e2c24"/>
+      <rect x="10" y="65" width="88" height="2" rx="1" fill="#ffffff"/>
+    </g>
+    <g class="sensor-cell" style="animation-delay: 0.4s;" transform="translate(512, 70)">
+      <rect width="116" height="74" rx="8" fill="#131b16" stroke="#1e2c24" stroke-width="1.2"/>
+      
+      <!-- Mini Activity Heatmap Dots -->
+      <g transform="translate(10, 10)">
+        <rect x="0" y="0" width="7" height="7" rx="1.5" fill="#10B981" fill-opacity="0.8"/>
+        <rect x="10" y="0" width="7" height="7" rx="1.5" fill="#34D399"/>
+        <rect x="20" y="0" width="7" height="7" rx="1.5" fill="#006d32"/>
+        <rect x="30" y="0" width="7" height="7" rx="1.5" fill="#26a641"/>
+      </g>
+      
+      <!-- Sensor Value Pill -->
+      <text x="106" y="18" text-anchor="end" fill="#34D399" font-family="'Fira Code', monospace" font-size="9" font-weight="700">88%</text>
+
+      <!-- Tech Name & Tag -->
+      <text x="10" y="44" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="800">THREE.JS</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Fira Code', monospace" font-size="7.5" font-weight="600" letter-spacing="0.3">WEBGL SHADERS</text>
+
+      <!-- Bottom micro-gauge -->
+      <rect x="10" y="65" width="96" height="2" rx="1" fill="#1e2c24"/>
+      <rect x="10" y="65" width="84" height="2" rx="1" fill="#34D399"/>
+    </g>
+    <g class="sensor-cell" style="animation-delay: 0.5s;" transform="translate(634, 70)">
+      <rect width="116" height="74" rx="8" fill="#131b16" stroke="#1e2c24" stroke-width="1.2"/>
+      
+      <!-- Mini Activity Heatmap Dots -->
+      <g transform="translate(10, 10)">
+        <rect x="0" y="0" width="7" height="7" rx="1.5" fill="#10B981" fill-opacity="0.8"/>
+        <rect x="10" y="0" width="7" height="7" rx="1.5" fill="#34D399"/>
+        <rect x="20" y="0" width="7" height="7" rx="1.5" fill="#006d32"/>
+        <rect x="30" y="0" width="7" height="7" rx="1.5" fill="#26a641"/>
+      </g>
+      
+      <!-- Sensor Value Pill -->
+      <text x="106" y="18" text-anchor="end" fill="#4ade80" font-family="'Fira Code', monospace" font-size="9" font-weight="700">86%</text>
+
+      <!-- Tech Name & Tag -->
+      <text x="10" y="44" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="800">NODE.JS</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Fira Code', monospace" font-size="7.5" font-weight="600" letter-spacing="0.3">ASYNC IO</text>
+
+      <!-- Bottom micro-gauge -->
+      <rect x="10" y="65" width="96" height="2" rx="1" fill="#1e2c24"/>
+      <rect x="10" y="65" width="82" height="2" rx="1" fill="#4ade80"/>
+    </g>
+    <g class="sensor-cell" style="animation-delay: 0.6s;" transform="translate(756, 70)">
+      <rect width="116" height="74" rx="8" fill="#131b16" stroke="#1e2c24" stroke-width="1.2"/>
+      
+      <!-- Mini Activity Heatmap Dots -->
+      <g transform="translate(10, 10)">
+        <rect x="0" y="0" width="7" height="7" rx="1.5" fill="#10B981" fill-opacity="0.8"/>
+        <rect x="10" y="0" width="7" height="7" rx="1.5" fill="#34D399"/>
+        <rect x="20" y="0" width="7" height="7" rx="1.5" fill="#006d32"/>
+        <rect x="30" y="0" width="7" height="7" rx="1.5" fill="#26a641"/>
+      </g>
+      
+      <!-- Sensor Value Pill -->
+      <text x="106" y="18" text-anchor="end" fill="#fb923c" font-family="'Fira Code', monospace" font-size="9" font-weight="700">82%</text>
+
+      <!-- Tech Name & Tag -->
+      <text x="10" y="44" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="800">JAVA</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Fira Code', monospace" font-size="7.5" font-weight="600" letter-spacing="0.3">CONCURRENCY</text>
+
+      <!-- Bottom micro-gauge -->
+      <rect x="10" y="65" width="96" height="2" rx="1" fill="#1e2c24"/>
+      <rect x="10" y="65" width="78" height="2" rx="1" fill="#fb923c"/>
+    </g>
+    <g class="sensor-cell" style="animation-delay: 0.7s;" transform="translate(24, 152)">
+      <rect width="116" height="74" rx="8" fill="#131b16" stroke="#1e2c24" stroke-width="1.2"/>
+      
+      <!-- Mini Activity Heatmap Dots -->
+      <g transform="translate(10, 10)">
+        <rect x="0" y="0" width="7" height="7" rx="1.5" fill="#10B981" fill-opacity="0.8"/>
+        <rect x="10" y="0" width="7" height="7" rx="1.5" fill="#34D399"/>
+        <rect x="20" y="0" width="7" height="7" rx="1.5" fill="#006d32"/>
+        <rect x="30" y="0" width="7" height="7" rx="1.5" fill="#26a641"/>
+      </g>
+      
+      <!-- Sensor Value Pill -->
+      <text x="106" y="18" text-anchor="end" fill="#60a5fa" font-family="'Fira Code', monospace" font-size="9" font-weight="700">85%</text>
+
+      <!-- Tech Name & Tag -->
+      <text x="10" y="44" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="800">PYTHON</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Fira Code', monospace" font-size="7.5" font-weight="600" letter-spacing="0.3">AUTOMATION</text>
+
+      <!-- Bottom micro-gauge -->
+      <rect x="10" y="65" width="96" height="2" rx="1" fill="#1e2c24"/>
+      <rect x="10" y="65" width="81" height="2" rx="1" fill="#60a5fa"/>
+    </g>
+    <g class="sensor-cell" style="animation-delay: 0.8s;" transform="translate(146, 152)">
+      <rect width="116" height="74" rx="8" fill="#131b16" stroke="#1e2c24" stroke-width="1.2"/>
+      
+      <!-- Mini Activity Heatmap Dots -->
+      <g transform="translate(10, 10)">
+        <rect x="0" y="0" width="7" height="7" rx="1.5" fill="#10B981" fill-opacity="0.8"/>
+        <rect x="10" y="0" width="7" height="7" rx="1.5" fill="#34D399"/>
+        <rect x="20" y="0" width="7" height="7" rx="1.5" fill="#006d32"/>
+        <rect x="30" y="0" width="7" height="7" rx="1.5" fill="#26a641"/>
+      </g>
+      
+      <!-- Sensor Value Pill -->
+      <text x="106" y="18" text-anchor="end" fill="#34D399" font-family="'Fira Code', monospace" font-size="9" font-weight="700">90%</text>
+
+      <!-- Tech Name & Tag -->
+      <text x="10" y="44" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="800">SUPABASE</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Fira Code', monospace" font-size="7.5" font-weight="600" letter-spacing="0.3">REALTIME DB</text>
+
+      <!-- Bottom micro-gauge -->
+      <rect x="10" y="65" width="96" height="2" rx="1" fill="#1e2c24"/>
+      <rect x="10" y="65" width="86" height="2" rx="1" fill="#34D399"/>
+    </g>
+    <g class="sensor-cell" style="animation-delay: 0.9s;" transform="translate(268, 152)">
+      <rect width="116" height="74" rx="8" fill="#131b16" stroke="#1e2c24" stroke-width="1.2"/>
+      
+      <!-- Mini Activity Heatmap Dots -->
+      <g transform="translate(10, 10)">
+        <rect x="0" y="0" width="7" height="7" rx="1.5" fill="#10B981" fill-opacity="0.8"/>
+        <rect x="10" y="0" width="7" height="7" rx="1.5" fill="#34D399"/>
+        <rect x="20" y="0" width="7" height="7" rx="1.5" fill="#006d32"/>
+        <rect x="30" y="0" width="7" height="7" rx="1.5" fill="#26a641"/>
+      </g>
+      
+      <!-- Sensor Value Pill -->
+      <text x="106" y="18" text-anchor="end" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="9" font-weight="700">88%</text>
+
+      <!-- Tech Name & Tag -->
+      <text x="10" y="44" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="800">POSTGRESQL</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Fira Code', monospace" font-size="7.5" font-weight="600" letter-spacing="0.3">RELATIONAL SQL</text>
+
+      <!-- Bottom micro-gauge -->
+      <rect x="10" y="65" width="96" height="2" rx="1" fill="#1e2c24"/>
+      <rect x="10" y="65" width="84" height="2" rx="1" fill="#38bdf8"/>
+    </g>
+    <g class="sensor-cell" style="animation-delay: 1.0s;" transform="translate(390, 152)">
+      <rect width="116" height="74" rx="8" fill="#131b16" stroke="#1e2c24" stroke-width="1.2"/>
+      
+      <!-- Mini Activity Heatmap Dots -->
+      <g transform="translate(10, 10)">
+        <rect x="0" y="0" width="7" height="7" rx="1.5" fill="#10B981" fill-opacity="0.8"/>
+        <rect x="10" y="0" width="7" height="7" rx="1.5" fill="#34D399"/>
+        <rect x="20" y="0" width="7" height="7" rx="1.5" fill="#006d32"/>
+        <rect x="30" y="0" width="7" height="7" rx="1.5" fill="#26a641"/>
+      </g>
+      
+      <!-- Sensor Value Pill -->
+      <text x="106" y="18" text-anchor="end" fill="#22d3ee" font-family="'Fira Code', monospace" font-size="9" font-weight="700">96%</text>
+
+      <!-- Tech Name & Tag -->
+      <text x="10" y="44" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="800">TAILWIND CSS</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Fira Code', monospace" font-size="7.5" font-weight="600" letter-spacing="0.3">DESIGN TOKENS</text>
+
+      <!-- Bottom micro-gauge -->
+      <rect x="10" y="65" width="96" height="2" rx="1" fill="#1e2c24"/>
+      <rect x="10" y="65" width="92" height="2" rx="1" fill="#22d3ee"/>
+    </g>
+    <g class="sensor-cell" style="animation-delay: 1.1s;" transform="translate(512, 152)">
+      <rect width="116" height="74" rx="8" fill="#131b16" stroke="#1e2c24" stroke-width="1.2"/>
+      
+      <!-- Mini Activity Heatmap Dots -->
+      <g transform="translate(10, 10)">
+        <rect x="0" y="0" width="7" height="7" rx="1.5" fill="#10B981" fill-opacity="0.8"/>
+        <rect x="10" y="0" width="7" height="7" rx="1.5" fill="#34D399"/>
+        <rect x="20" y="0" width="7" height="7" rx="1.5" fill="#006d32"/>
+        <rect x="30" y="0" width="7" height="7" rx="1.5" fill="#26a641"/>
+      </g>
+      
+      <!-- Sensor Value Pill -->
+      <text x="106" y="18" text-anchor="end" fill="#f43f5e" font-family="'Fira Code', monospace" font-size="9" font-weight="700">87%</text>
+
+      <!-- Tech Name & Tag -->
+      <text x="10" y="44" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="800">COLYSEUS</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Fira Code', monospace" font-size="7.5" font-weight="600" letter-spacing="0.3">WEBSOCKET SYNC</text>
+
+      <!-- Bottom micro-gauge -->
+      <rect x="10" y="65" width="96" height="2" rx="1" fill="#1e2c24"/>
+      <rect x="10" y="65" width="83" height="2" rx="1" fill="#f43f5e"/>
+    </g>
+    <g class="sensor-cell" style="animation-delay: 1.2s;" transform="translate(634, 152)">
+      <rect width="116" height="74" rx="8" fill="#131b16" stroke="#1e2c24" stroke-width="1.2"/>
+      
+      <!-- Mini Activity Heatmap Dots -->
+      <g transform="translate(10, 10)">
+        <rect x="0" y="0" width="7" height="7" rx="1.5" fill="#10B981" fill-opacity="0.8"/>
+        <rect x="10" y="0" width="7" height="7" rx="1.5" fill="#34D399"/>
+        <rect x="20" y="0" width="7" height="7" rx="1.5" fill="#006d32"/>
+        <rect x="30" y="0" width="7" height="7" rx="1.5" fill="#26a641"/>
+      </g>
+      
+      <!-- Sensor Value Pill -->
+      <text x="106" y="18" text-anchor="end" fill="#a855f7" font-family="'Fira Code', monospace" font-size="9" font-weight="700">98%</text>
+
+      <!-- Tech Name & Tag -->
+      <text x="10" y="44" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="800">CLAUDE CODE</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Fira Code', monospace" font-size="7.5" font-weight="600" letter-spacing="0.3">AI DIRECTING</text>
+
+      <!-- Bottom micro-gauge -->
+      <rect x="10" y="65" width="96" height="2" rx="1" fill="#1e2c24"/>
+      <rect x="10" y="65" width="94" height="2" rx="1" fill="#a855f7"/>
+    </g>
+    <g class="sensor-cell" style="animation-delay: 1.3s;" transform="translate(756, 152)">
+      <rect width="116" height="74" rx="8" fill="#131b16" stroke="#1e2c24" stroke-width="1.2"/>
+      
+      <!-- Mini Activity Heatmap Dots -->
+      <g transform="translate(10, 10)">
+        <rect x="0" y="0" width="7" height="7" rx="1.5" fill="#10B981" fill-opacity="0.8"/>
+        <rect x="10" y="0" width="7" height="7" rx="1.5" fill="#34D399"/>
+        <rect x="20" y="0" width="7" height="7" rx="1.5" fill="#006d32"/>
+        <rect x="30" y="0" width="7" height="7" rx="1.5" fill="#26a641"/>
+      </g>
+      
+      <!-- Sensor Value Pill -->
+      <text x="106" y="18" text-anchor="end" fill="#34D399" font-family="'Fira Code', monospace" font-size="9" font-weight="700">99%</text>
+
+      <!-- Tech Name & Tag -->
+      <text x="10" y="44" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="800">ANTIGRAVITY</text>
+      <text x="10" y="58" fill="#94A3B8" font-family="'Fira Code', monospace" font-size="7.5" font-weight="600" letter-spacing="0.3">AGENTIC ENGINE</text>
+
+      <!-- Bottom micro-gauge -->
+      <rect x="10" y="65" width="96" height="2" rx="1" fill="#1e2c24"/>
+      <rect x="10" y="65" width="95" height="2" rx="1" fill="#34D399"/>
+    </g>
+
+  <!-- Bottom Thin Progress Bar -->
+  <rect x="24" y="244" width="852" height="2" rx="1" fill="#1b2a20"/>
+  <rect x="24" y="244" width="852" height="2" rx="1" fill="#34D399" fill-opacity="0.8"/>
+</svg>

@@ -1,0 +1,141 @@
+<svg width="900" height="240" viewBox="0 0 900 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    
+    <pattern id="ambientGrid" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="10" height="10" rx="2.5" fill="#10B981" fill-opacity="0.06"/>
+      <rect x="14" y="0" width="10" height="10" rx="2.5" fill="#10B981" fill-opacity="0.03"/>
+      <rect x="0" y="14" width="10" height="10" rx="2.5" fill="#10B981" fill-opacity="0.04"/>
+      <rect x="14" y="14" width="10" height="10" rx="2.5" fill="#34D399" fill-opacity="0.07"/>
+    </pattern>
+    
+    <linearGradient id="termBg" x1="0" y1="0" x2="900" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0e1511"/>
+      <stop offset="100%" stop-color="#080e0a"/>
+    </linearGradient>
+    <linearGradient id="scanGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#34D399" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+    
+    .term-text {
+      font-family: 'Fira Code', 'JetBrains Mono', 'Menlo', monospace;
+      font-size: 12px;
+      fill: #34D399;
+    }
+    .term-dim {
+      fill: #64748B;
+    }
+    .term-bright {
+      fill: #F8FAFC;
+      font-weight: 700;
+    }
+    .line-1 { animation: revealLine 0.4s ease forwards 0.2s; opacity: 0; }
+    .line-2 { animation: revealLine 0.4s ease forwards 0.9s; opacity: 0; }
+    .line-3 { animation: revealLine 0.4s ease forwards 1.6s; opacity: 0; }
+    .line-4 { animation: revealLine 0.4s ease forwards 2.3s; opacity: 0; }
+    .line-5 { animation: revealLine 0.4s ease forwards 3.0s; opacity: 0; }
+    .cursor { animation: blinkCursor 0.9s infinite; }
+
+    @keyframes revealLine {
+      0% { opacity: 0; transform: translateY(4px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes blinkCursor {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    .scan-beam {
+      animation: sweepBeam 4s ease-in-out infinite 3.5s;
+      opacity: 0;
+    }
+    @keyframes sweepBeam {
+      0% { transform: translateX(-900px); opacity: 0; }
+      20% { opacity: 0.8; }
+      80% { opacity: 0.8; }
+      100% { transform: translateX(900px); opacity: 0; }
+    }
+    .grid-layer {
+      animation: driftGrid 30s linear infinite;
+    }
+    @keyframes driftGrid {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(-28px, -28px); }
+    }
+  </style>
+
+  <!-- Base Container -->
+  <rect x="1" y="1" width="898" height="238" rx="14" fill="url(#termBg)" stroke="#1e2c24" stroke-width="1.5"/>
+
+  <!-- Ambient Grid Layer (5-8% opacity) -->
+  <g class="grid-layer">
+    <rect x="-28" y="-28" width="956" height="296" fill="url(#ambientGrid)"/>
+  </g>
+
+  <!-- Terminal Header Bar -->
+  <rect x="1" y="1" width="898" height="34" rx="14" fill="#131c16" stroke="#1e2c24" stroke-width="1"/>
+  <rect x="1" y="24" width="898" height="11" fill="#131c16"/>
+  <circle cx="20" cy="18" r="5" fill="#ef4444" fill-opacity="0.8"/>
+  <circle cx="36" cy="18" r="5" fill="#f59e0b" fill-opacity="0.8"/>
+  <circle cx="52" cy="18" r="5" fill="#10B981" fill-opacity="0.8"/>
+  <text x="450" y="22" text-anchor="middle" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="11" font-weight="600" letter-spacing="0.5">tejaskm-dev@telemetry-station: ~ (boot-sequence)</text>
+  
+  <!-- Right status pill -->
+  <g transform="translate(775, 8)">
+    <rect width="110" height="20" rx="10" fill="#082216" stroke="#10B981" stroke-opacity="0.5"/>
+    <circle cx="12" cy="10" r="3.5" fill="#34D399"/>
+    <text x="22" y="14" fill="#34D399" font-family="'Fira Code', monospace" font-size="9" font-weight="700">STATUS: ONLINE</text>
+  </g>
+
+  <!-- Boot Log Lines -->
+  <g transform="translate(24, 64)">
+    <!-- Line 1 -->
+    <g class="line-1">
+      <text x="0" y="0" class="term-text"><tspan class="term-dim">[00:00.01]</tspan> $ initializing_profile --user <tspan class="term-bright">tejaskm-dev</tspan> --arch btech_cse_2029</text>
+      <text x="740" y="0" class="term-text" fill="#34D399">[OK]</text>
+    </g>
+
+    <!-- Line 2 -->
+    <g class="line-2" transform="translate(0, 26)">
+      <text x="0" y="0" class="term-text"><tspan class="term-dim">[00:00.34]</tspan> $ loading telemetry modules (ast_engine, celestial_physics, swaram_dsp)...</text>
+      <text x="740" y="0" class="term-text" fill="#34D399">[READY]</text>
+    </g>
+
+    <!-- Line 3 -->
+    <g class="line-3" transform="translate(0, 52)">
+      <text x="0" y="0" class="term-text"><tspan class="term-dim">[00:00.78]</tspan> $ connecting neural directing loop: <tspan class="term-bright">Claude Code</tspan> + <tspan class="term-bright">Antigravity</tspan> + <tspan class="term-bright">Groq</tspan>...</text>
+      <text x="740" y="0" class="term-text" fill="#34D399">[SYNCED]</text>
+    </g>
+
+    <!-- Line 4 -->
+    <g class="line-4" transform="translate(0, 78)">
+      <text x="0" y="0" class="term-text"><tspan class="term-dim">[00:01.20]</tspan> $ telemetry verified: <tspan class="term-bright">720+ contributions</tspan> · streak active · 5 builds nominal</text>
+      <text x="740" y="0" class="term-text" fill="#34D399">[PASS]</text>
+    </g>
+
+    <!-- Line 5: Ready Motto with Blinking Cursor -->
+    <g class="line-5" transform="translate(0, 106)">
+      <text x="0" y="0" class="term-text" fill="#F8FAFC" font-weight="700">&gt; DIRECTIVE ACTIVATED: <tspan fill="#34D399">ABSORB • ADAPT • ARCHITECT</tspan><tspan class="cursor" fill="#34D399"> _</tspan></text>
+    </g>
+  </g>
+
+  <!-- Scanning Beam Effect -->
+  <g class="scan-beam">
+    <rect x="0" y="36" width="200" height="196" fill="url(#scanGlow)"/>
+  </g>
+
+  <!-- Bottom Thin Progress Bar -->
+  <rect x="24" y="218" width="852" height="3" rx="1.5" fill="#13241b"/>
+  <rect x="24" y="218" width="852" height="3" rx="1.5" fill="#34D399" fill-opacity="0.8"/>
+</svg>

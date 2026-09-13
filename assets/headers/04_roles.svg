@@ -14,7 +14,7 @@
   </g>
 
   <!-- Title -->
-  <text x="66" y="31" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="14" font-weight="800" letter-spacing="1">ACTIVE ACTIVATIONS &amp; ROLES</text>
+  <text x="66" y="31" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="14" font-weight="800" letter-spacing="1">COMMUNITY ENGAGEMENT &amp; ROLES</text>
 
   <!-- Accent Line -->
   <line x1="420" y1="25" x2="780" y2="25" stroke="#facc15" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4"/>

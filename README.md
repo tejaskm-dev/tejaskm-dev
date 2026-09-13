@@ -150,13 +150,13 @@
 
 <br/>
 
-<!-- 04 ACTIVE ACTIVATIONS & ROLES -->
+<!-- 04 COMMUNITY ENGAGEMENT & ROLES -->
 <p align="center">
-  <img src="./assets/headers/04_roles.svg" width="100%" alt="04 Active Activations & Roles" />
+  <img src="./assets/headers/04_roles.svg" width="100%" alt="04 Community Engagement &amp; Roles" />
 </p>
 
 ```yaml
-Active Activations:
+Communities & Roles:
   - Organization: CSI Club ASIET
     Position: Tech Team Member
     Focus: Technical event infrastructure, interactive student challenges (e.g. Operation Vault)

@@ -14,7 +14,7 @@
   </g>
 
   <!-- Title -->
-  <text x="66" y="31" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="14" font-weight="800" letter-spacing="1">ARCADE TELEMETRY &amp; ACTIVITY</text>
+  <text x="66" y="31" fill="#F8FAFC" font-family="'Inter', -apple-system, sans-serif" font-size="14" font-weight="800" letter-spacing="1">ARCADE TELEMETRY &amp; METRICS</text>
 
   <!-- Accent Line -->
   <line x1="420" y1="25" x2="780" y2="25" stroke="#34D399" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4"/>
@@ -22,6 +22,6 @@
   <!-- Right Tag -->
   <g transform="translate(800, 14)">
     <rect width="84" height="22" rx="11" fill="#064e3b" stroke="#34D399" stroke-opacity="0.4"/>
-    <text x="42" y="15" text-anchor="middle" fill="#34D399" font-family="'Inter', sans-serif" font-size="9" font-weight="700" letter-spacing="0.8">GRID HUD</text>
+    <text x="42" y="15" text-anchor="middle" fill="#34D399" font-family="'Inter', sans-serif" font-size="9" font-weight="700" letter-spacing="0.8">TELEMETRY</text>
   </g>
 </svg>

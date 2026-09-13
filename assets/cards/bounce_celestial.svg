@@ -21,11 +21,10 @@
     <ellipse cx="38" cy="30" rx="26" ry="8" transform="rotate(-20 38 30)" stroke="#22d3ee" stroke-width="2" fill="none"/>
   </g>
 
-  <!-- Status Pill -->
+  <!-- Clean Category Pill -->
   <g transform="translate(196, 24)">
     <rect x="0" y="0" width="90" height="22" rx="11" fill="#0d242c" stroke="#38bdf8" stroke-opacity="0.6"/>
-    <circle cx="12" cy="11" r="3.5" fill="#38bdf8"/>
-    <text x="50" y="15" text-anchor="middle" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="9" font-weight="700" letter-spacing="0.5">3D ARCADE</text>
+    <text x="45" y="15" text-anchor="middle" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="8.5" font-weight="800" letter-spacing="0.5">3D PHYSICS</text>
   </g>
 
   <!-- Title & Subtitle -->

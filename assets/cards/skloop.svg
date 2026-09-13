@@ -30,11 +30,10 @@
     <polygon points="54,34 56,38 60,38 57,41 58,45 54,42 50,45 51,41 48,38 52,38" fill="#facc15"/>
   </g>
 
-  <!-- Status Pill -->
-  <g transform="translate(196, 24)">
-    <rect x="0" y="0" width="90" height="22" rx="11" fill="#0e2a1e" stroke="#10B981" stroke-opacity="0.6"/>
-    <circle cx="12" cy="11" r="3.5" fill="#34D399"/>
-    <text x="50" y="15" text-anchor="middle" fill="#34D399" font-family="'Inter', sans-serif" font-size="9" font-weight="700" letter-spacing="0.5">ACTIVE BUILD</text>
+  <!-- Clean Category Pill (No dot, No pulse, No fake active) -->
+  <g transform="translate(180, 24)">
+    <rect x="0" y="0" width="106" height="22" rx="11" fill="#0e2a1e" stroke="#10B981" stroke-opacity="0.6"/>
+    <text x="53" y="15" text-anchor="middle" fill="#34D399" font-family="'Inter', sans-serif" font-size="8.5" font-weight="800" letter-spacing="0.5">EDTECH PLATFORM</text>
   </g>
 
   <!-- Title & Subtitle -->
