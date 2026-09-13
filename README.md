@@ -45,7 +45,7 @@
         "A slime does not resist the geometry of its container — it adapts, absorbs complexity, and dissolves friction. Code is malleable; vision and systems architecture are permanent."
       </blockquote>
       <p>
-        I am <b>Tejas K M</b> (<code>tejaskm-dev</code>, or occasionally "shinz" when things crash in production), a first-year <b>BTech Computer Science &amp; Engineering</b> student at <b>ASIET</b> (Class of 2029).
+        I am <b>Tejas K M</b> (<code>tejaskm-dev</code>, or occasionally "shinz" when things crash in production), a second-year <b>BTech Computer Science &amp; Engineering</b> student at <b>ASIET</b>.
       </p>
       <p>
         Alongside building interactive software, 3D physics games, and compiler engines, I engineer tools on the <b>CSI Club Tech Team</b> and contribute actively across <b>µLearn</b> and <b>IEEE SB ASIET</b>. Based in Kerala, India, I operate at the intersection of systems architecture, rapid AI orchestration, and technical product execution.

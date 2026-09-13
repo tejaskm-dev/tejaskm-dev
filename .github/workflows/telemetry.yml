@@ -1,0 +1,48 @@
+name: Update Real-Time Arcade Telemetry
+
+on:
+  schedule:
+    # Runs every 6 hours
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/telemetry.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  telemetry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Live Telemetry Updater
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 scripts/update_telemetry.py
+
+      - name: Commit and push if telemetry changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          if [ -n "$(git status --porcelain assets/arcade_hud.svg)" ]; then
+            git add assets/arcade_hud.svg
+            git commit -m "chore(telemetry): auto-update live arcade telemetry [skip ci]"
+            git push
+          else
+            echo "Arcade HUD telemetry is already up to date."
+          fi

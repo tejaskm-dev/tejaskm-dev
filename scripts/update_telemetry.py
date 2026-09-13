@@ -1,4 +1,124 @@
-<svg width="900" height="260" viewBox="0 0 900 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+import os
+import sys
+import json
+import urllib.request
+import subprocess
+
+def get_github_token():
+    token = os.environ.get("GITHUB_TOKEN")
+    if token:
+        return token
+    try:
+        res = subprocess.run(["gh", "auth", "token"], capture_output=True, text=True, check=True)
+        return res.stdout.strip()
+    except Exception:
+        return None
+
+def fetch_live_metrics(username="tejaskm-dev"):
+    token = get_github_token()
+    if not token:
+        print("No GitHub token available; using fallback metrics.")
+        return {
+            "contributions": 731,
+            "prs": 68,
+            "top_lang": "74% TS",
+            "rank": "S+ RANK"
+        }
+
+    query = """
+    query($login: String!) {
+      user(login: $login) {
+        contributionsCollection {
+          totalCommitContributions
+          restrictedContributionsCount
+          totalPullRequestContributions
+          contributionCalendar {
+            totalContributions
+          }
+        }
+        pullRequests(states: MERGED) {
+          totalCount
+        }
+        repositories(ownerAffiliations: OWNER, first: 100, isFork: false) {
+          nodes {
+            languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
+              edges {
+                size
+                node {
+                  name
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    """
+
+    req_data = json.dumps({"query": query, "variables": {"login": username}}).encode("utf-8")
+    req = urllib.request.Request(
+        "https://api.github.com/graphql",
+        data=req_data,
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+            "User-Agent": "ArcadeTelemetry-Updater"
+        }
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=15) as response:
+            result = json.loads(response.read().decode("utf-8"))
+
+        user_data = result.get("data", {}).get("user", {})
+        calendar = user_data.get("contributionsCollection", {}).get("contributionCalendar", {})
+        total_contributions = calendar.get("totalContributions", 731)
+        total_prs = user_data.get("pullRequests", {}).get("totalCount", 68)
+
+        # Calculate programming language percentages (excluding markup/data files)
+        excluded_langs = {"HTML", "CSS", "TeX", "MDX", "Markdown", "Dockerfile", "JSON", "YAML", "Plain Text"}
+        lang_sizes = {}
+        total_code_bytes = 0
+        repos = user_data.get("repositories", {}).get("nodes", [])
+        for r in repos:
+            edges = r.get("languages", {}).get("edges", [])
+            for e in edges:
+                name = e.get("node", {}).get("name")
+                if name not in excluded_langs:
+                    size = e.get("size", 0)
+                    lang_sizes[name] = lang_sizes.get(name, 0) + size
+                    total_code_bytes += size
+
+        # Top language calculation
+        ts_size = lang_sizes.get("TypeScript", 0)
+        ts_percent = int(round((ts_size / total_code_bytes) * 100)) if total_code_bytes > 0 else 74
+        top_lang = f"{ts_percent}% TS"
+
+        # Calculate system rank
+        rank = "S+ RANK" if total_contributions >= 500 else "A+ RANK"
+
+        return {
+            "contributions": total_contributions,
+            "prs": total_prs,
+            "top_lang": top_lang,
+            "rank": rank
+        }
+    except Exception as e:
+        print(f"Error querying GitHub GraphQL API: {e}; using fallback metrics.")
+        return {
+            "contributions": 731,
+            "prs": 68,
+            "top_lang": "74% TS",
+            "rank": "S+ RANK"
+        }
+
+def render_arcade_hud(metrics):
+    contributions = f"{metrics['contributions']}+"
+    prs = f"{metrics['prs']}+"
+    top_lang = metrics['top_lang']
+    rank = metrics['rank']
+
+    svg = f'''<svg width="900" height="260" viewBox="0 0 900 260" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="stationBg" x1="0" y1="0" x2="900" y2="260" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#141a16"/>
@@ -36,22 +156,22 @@
     <g transform="translate(0, 102)">
       <!-- Box 1: Commits / Contributions -->
       <rect x="0" y="0" width="110" height="56" rx="10" fill="#152119" stroke="#1e3226"/>
-      <text x="55" y="26" text-anchor="middle" fill="#34D399" font-family="'Inter', sans-serif" font-size="18" font-weight="900">731+</text>
+      <text x="55" y="26" text-anchor="middle" fill="#34D399" font-family="'Inter', sans-serif" font-size="18" font-weight="900">{contributions}</text>
       <text x="55" y="44" text-anchor="middle" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="9" font-weight="600">CONTRIBUTIONS</text>
 
       <!-- Box 2: PRs -->
       <rect x="120" y="0" width="110" height="56" rx="10" fill="#152119" stroke="#1e3226"/>
-      <text x="175" y="26" text-anchor="middle" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="18" font-weight="900">68+</text>
+      <text x="175" y="26" text-anchor="middle" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="18" font-weight="900">{prs}</text>
       <text x="175" y="44" text-anchor="middle" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="9" font-weight="600">PRS MERGED</text>
 
       <!-- Box 3: Code Rank -->
       <rect x="240" y="0" width="110" height="56" rx="10" fill="#152119" stroke="#1e3226"/>
-      <text x="295" y="26" text-anchor="middle" fill="#facc15" font-family="'Inter', sans-serif" font-size="18" font-weight="900">S+ RANK</text>
+      <text x="295" y="26" text-anchor="middle" fill="#facc15" font-family="'Inter', sans-serif" font-size="18" font-weight="900">{rank}</text>
       <text x="295" y="44" text-anchor="middle" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="9" font-weight="600">SYSTEM HEALTH</text>
 
       <!-- Box 4: Top Syntax -->
       <rect x="360" y="0" width="110" height="56" rx="10" fill="#152119" stroke="#1e3226"/>
-      <text x="415" y="26" text-anchor="middle" fill="#34D399" font-family="'Inter', sans-serif" font-size="16" font-weight="900">74% TS</text>
+      <text x="415" y="26" text-anchor="middle" fill="#34D399" font-family="'Inter', sans-serif" font-size="16" font-weight="900">{top_lang}</text>
       <text x="415" y="44" text-anchor="middle" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="9" font-weight="600">CORE SYNTAX</text>
     </g>
 
@@ -101,4 +221,18 @@
       <text x="16" y="62" fill="#9a3412" font-family="'Inter', sans-serif" font-size="9" font-weight="600">better devs • brighter</text>
     </g>
   </g>
-</svg>
+</svg>'''
+    return svg
+
+def update_hud():
+    print("Fetching live metrics for tejaskm-dev...")
+    metrics = fetch_live_metrics("tejaskm-dev")
+    print(f"Live Metrics: {metrics}")
+    svg_content = render_arcade_hud(metrics)
+    os.makedirs("assets", exist_ok=True)
+    with open("assets/arcade_hud.svg", "w", encoding="utf-8") as f:
+        f.write(svg_content)
+    print("Updated assets/arcade_hud.svg successfully with live metrics!")
+
+if __name__ == "__main__":
+    update_hud()
