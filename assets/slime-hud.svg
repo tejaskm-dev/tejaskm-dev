@@ -1,106 +1,89 @@
-<svg width="900" height="190" viewBox="0 0 900 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="920" height="200" viewBox="0 0 920 200" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="hudBg" x1="0" y1="0" x2="900" y2="190" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#050e0a"/>
-      <stop offset="50%" stop-color="#091812"/>
-      <stop offset="100%" stop-color="#040b08"/>
+    <linearGradient id="hudBg" x1="0" y1="0" x2="920" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#07120e"/>
+      <stop offset="50%" stop-color="#0b1a14"/>
+      <stop offset="100%" stop-color="#050c09"/>
     </linearGradient>
-    <linearGradient id="hudBorder" x1="0" y1="0" x2="900" y2="190" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#00FF66" stop-opacity="0.8"/>
-      <stop offset="50%" stop-color="#00F5D4" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#00FF66" stop-opacity="0.8"/>
+    <linearGradient id="hudBorder" x1="0" y1="0" x2="920" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#34D399" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.8"/>
     </linearGradient>
-    <linearGradient id="scanline" x1="0" y1="0" x2="0" y2="190" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#00FF66" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#00FF66" stop-opacity="0.08"/>
-      <stop offset="100%" stop-color="#00FF66" stop-opacity="0"/>
+    <linearGradient id="slimeDrop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
     </linearGradient>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <style>
-      @keyframes pulseDot {
-        0%, 100% { opacity: 1; transform: scale(1); }
-        50% { opacity: 0.3; transform: scale(0.8); }
-      }
-      @keyframes sweep {
-        0% { transform: translateY(-190px); }
-        100% { transform: translateY(190px); }
-      }
-      .pulsing-dot { animation: pulseDot 2s infinite ease-in-out; transform-origin: 28px 28px; }
-      .sweep-line { animation: sweep 4s infinite linear; }
-    </style>
   </defs>
 
-  <!-- Background Card -->
-  <rect x="1" y="1" width="898" height="188" rx="12" fill="url(#hudBg)" stroke="url(#hudBorder)" stroke-width="1.5"/>
+  <!-- Container -->
+  <rect x="1" y="1" width="918" height="198" rx="16" fill="url(#hudBg)" stroke="url(#hudBorder)" stroke-width="1.5"/>
 
-  <!-- Subtle Scanline -->
-  <g clip-path="url(#cardClip)">
-    <rect class="sweep-line" x="1" y="1" width="898" height="60" fill="url(#scanline)"/>
+  <!-- Top Glass Accent Strip -->
+  <path d="M 1 16 C 1 7.716 7.716 1 16 1 L 904 1 C 912.284 1 919 7.716 919 16 L 919 44 L 1 44 Z" fill="#0f241c" fill-opacity="0.7"/>
+  <line x1="1" y1="44" x2="919" y2="44" stroke="#10B981" stroke-opacity="0.25" stroke-width="1"/>
+
+  <!-- Top Header Content -->
+  <!-- Cute Slime Icon -->
+  <g transform="translate(24, 14)">
+    <path d="M 10 3 C 5 3, 2 8, 2 13 C 2 19, 6 21, 11 21 C 16 21, 20 19, 20 13 C 20 8, 17 3, 10 3 Z" fill="url(#slimeDrop)"/>
+    <circle cx="8" cy="11" r="1.5" fill="#04120c"/>
+    <circle cx="14" cy="11" r="1.5" fill="#04120c"/>
+    <ellipse cx="6" cy="7" rx="2.5" ry="1.2" fill="#ffffff" opacity="0.6"/>
+  </g>
+  <text x="52" y="28" fill="#34D399" font-family="'Inter', sans-serif" font-size="13" font-weight="700" letter-spacing="0.5">SLIME CREATOR STATION</text>
+  <text x="238" y="28" fill="#64748B" font-family="'Inter', sans-serif" font-size="12">•</text>
+  <text x="252" y="28" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12">Directing AI Tooling &amp; Systems Architecture</text>
+
+  <!-- Status Pill Right -->
+  <rect x="734" y="13" width="162" height="22" rx="11" fill="#092117" stroke="#10B981" stroke-opacity="0.4"/>
+  <circle cx="748" cy="24" r="4" fill="#34D399" filter="url(#softGlow)"/>
+  <text x="760" y="28" fill="#34D399" font-family="'Inter', sans-serif" font-size="11" font-weight="600">STATE: TRANSLUCENT</text>
+
+  <!-- Content Columns -->
+  <!-- Column 1: Identity & Habitat -->
+  <g transform="translate(30, 68)">
+    <rect x="0" y="0" width="74" height="18" rx="4" fill="#0d291e"/>
+    <text x="37" y="13" text-anchor="middle" fill="#34D399" font-family="'Fira Code', monospace" font-size="9" font-weight="700">IDENTITY</text>
+    <text x="0" y="38" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="16" font-weight="700">Tejas K M ("Shinz")</text>
+    <text x="0" y="56" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12">ASIET CSE '29 • Batch Representative</text>
+    <text x="0" y="74" fill="#64748B" font-family="'Inter', sans-serif" font-size="12">Kerala, India • CSI, µLearn, IEEE</text>
   </g>
 
-  <!-- Header Strip -->
-  <path d="M 1 12 C 1 5.925 5.925 1 12 1 L 888 1 C 894.075 1 899 5.925 899 12 L 899 40 L 1 40 Z" fill="#0c2217" fill-opacity="0.6"/>
-  <line x1="1" y1="40" x2="899" y2="40" stroke="#00FF66" stroke-opacity="0.25" stroke-width="1"/>
+  <!-- Divider 1 -->
+  <line x1="280" y1="62" x2="280" y2="175" stroke="#10B981" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="3 3"/>
 
-  <!-- Pulse Status Indicator -->
-  <circle class="pulsing-dot" cx="28" cy="21" r="5" fill="#00FF66" filter="url(#glow)"/>
-  <circle cx="28" cy="21" r="9" stroke="#00FF66" stroke-opacity="0.4" stroke-width="1"/>
-  <text x="46" y="25" fill="#00FF66" font-family="'Fira Code', monospace" font-size="12" font-weight="700" letter-spacing="1.5">SLIME TELEMETRY // SHINZ-OS v2.6</text>
-  
-  <rect x="730" y="12" width="150" height="20" rx="4" fill="#04140c" stroke="#00FF66" stroke-opacity="0.4"/>
-  <text x="805" y="26" text-anchor="middle" fill="#00FF66" font-family="'Fira Code', monospace" font-size="10" font-weight="600" letter-spacing="1">STATE: TRANSLUCENT</text>
-
-  <!-- Grid Items -->
-  <!-- Col 1 -->
-  <g transform="translate(30, 60)">
-    <text x="0" y="0" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="10" font-weight="600" letter-spacing="1">[ IDENTITY ]</text>
-    <text x="0" y="20" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="15" font-weight="700">Tejas K M ("Shinz")</text>
-    <text x="0" y="38" fill="#8899A6" font-family="'Inter', sans-serif" font-size="12">Directing AI · Systems Architect</text>
-
-    <text x="0" y="70" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="10" font-weight="600" letter-spacing="1">[ HABITAT &amp; BATCH ]</text>
-    <text x="0" y="90" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="13" font-weight="600">ASIET CSE '29 · Kerala, India</text>
-    <text x="0" y="108" fill="#00FF66" font-family="'Inter', sans-serif" font-size="12" font-weight="500">Batch Class Representative</text>
+  <!-- Column 2: Tooling & Literacy -->
+  <g transform="translate(310, 68)">
+    <rect x="0" y="0" width="86" height="18" rx="4" fill="#0d291e"/>
+    <text x="43" y="13" text-anchor="middle" fill="#34D399" font-family="'Fira Code', monospace" font-size="9" font-weight="700">AI DIRECTIVE</text>
+    <text x="0" y="38" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="15" font-weight="600">AI-Directed Engineering</text>
+    <text x="0" y="56" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12">Claude Code • Antigravity • Groq / Llama</text>
+    <text x="0" y="74" fill="#34D399" font-family="'Inter', sans-serif" font-size="12" font-weight="500">Deep Code Literacy &amp; Architecture</text>
   </g>
 
-  <!-- Divider Line 1 -->
-  <line x1="280" y1="55" x2="280" y2="175" stroke="#00FF66" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="4 4"/>
+  <!-- Divider 2 -->
+  <line x1="590" y1="62" x2="590" y2="175" stroke="#10B981" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="3 3"/>
 
-  <!-- Col 2 -->
-  <g transform="translate(310, 60)">
-    <text x="0" y="0" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="10" font-weight="600" letter-spacing="1">[ LEVERAGE VECTOR ]</text>
-    <text x="0" y="20" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="14" font-weight="600">AI-Directed Engineering</text>
-    <text x="0" y="38" fill="#8899A6" font-family="'Inter', sans-serif" font-size="12">Claude Code · Antigravity · Groq / Llama</text>
-
-    <text x="0" y="70" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="10" font-weight="600" letter-spacing="1">[ CORE SPECIALTY ]</text>
-    <text x="0" y="90" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="13" font-weight="600">AST Engines · State Sync · PWAs</text>
-    <text x="0" y="108" fill="#8899A6" font-family="'Inter', sans-serif" font-size="12">Code-literate debugging &amp; architecture</text>
+  <!-- Column 3: Vision & Fluidity -->
+  <g transform="translate(620, 68)">
+    <rect x="0" y="0" width="88" height="18" rx="4" fill="#0d291e"/>
+    <text x="44" y="13" text-anchor="middle" fill="#34D399" font-family="'Fira Code', monospace" font-size="9" font-weight="700">TRAJECTORY</text>
+    <text x="0" y="38" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="14" font-weight="600">Technical Product Leadership</text>
+    <text x="0" y="56" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="12">End-to-End Ownership &amp; Ventures</text>
+    
+    <!-- Fluidity Meter -->
+    <g transform="translate(0, 72)">
+      <rect x="0" y="0" width="240" height="10" rx="5" fill="#071b12" stroke="#10B981" stroke-opacity="0.3"/>
+      <rect x="2" y="2" width="210" height="6" rx="3" fill="#34D399" filter="url(#softGlow)"/>
+      <text x="0" y="24" fill="#34D399" font-family="'Inter', sans-serif" font-size="11" font-weight="500">Fluidity: Rapidly Absorbing Complexity</text>
+    </g>
   </g>
-
-  <!-- Divider Line 2 -->
-  <line x1="590" y1="55" x2="590" y2="175" stroke="#00FF66" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="4 4"/>
-
-  <!-- Col 3 -->
-  <g transform="translate(620, 60)">
-    <text x="0" y="0" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="10" font-weight="600" letter-spacing="1">[ NORTH STAR ]</text>
-    <text x="0" y="20" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="14" font-weight="600">Technical Product Leadership</text>
-    <text x="0" y="38" fill="#8899A6" font-family="'Inter', sans-serif" font-size="12">End-to-End Ownership &amp; Ventures</text>
-
-    <text x="0" y="70" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="10" font-weight="600" letter-spacing="1">[ FLUIDITY INDEX ]</text>
-    <!-- Progress Bar -->
-    <rect x="0" y="80" width="240" height="12" rx="6" fill="#071810" stroke="#00FF66" stroke-opacity="0.3"/>
-    <rect x="2" y="82" width="210" height="8" rx="4" fill="#00FF66" filter="url(#glow)"/>
-    <text x="0" y="110" fill="#00FF66" font-family="'Fira Code', monospace" font-size="11">Absorbing Complexity // Rapid</text>
-  </g>
-
-  <!-- Corner Accents -->
-  <path d="M 8 18 L 8 8 L 18 8" stroke="#00FF66" stroke-width="2" fill="none"/>
-  <path d="M 892 18 L 892 8 L 882 8" stroke="#00FF66" stroke-width="2" fill="none"/>
-  <path d="M 8 172 L 8 182 L 18 182" stroke="#00FF66" stroke-width="2" fill="none"/>
-  <path d="M 892 172 L 892 182 L 882 182" stroke="#00FF66" stroke-width="2" fill="none"/>
 </svg>

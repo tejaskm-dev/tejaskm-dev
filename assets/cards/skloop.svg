@@ -1,97 +1,142 @@
-<svg width="900" height="270" viewBox="0 0 900 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="920" height="340" viewBox="0 0 920 340" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="cardBg1" x1="0" y1="0" x2="900" y2="270" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#06120d"/>
-      <stop offset="60%" stop-color="#091b13"/>
-      <stop offset="100%" stop-color="#040e09"/>
+    <linearGradient id="skBg" x1="0" y1="0" x2="920" y2="340" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#071410"/>
+      <stop offset="60%" stop-color="#0a1d17"/>
+      <stop offset="100%" stop-color="#050e0a"/>
     </linearGradient>
-    <linearGradient id="cardBorder1" x1="0" y1="0" x2="900" y2="270" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#00FF66" stop-opacity="0.9"/>
-      <stop offset="50%" stop-color="#00F5D4" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#059669" stop-opacity="0.8"/>
+    <linearGradient id="skBorder" x1="0" y1="0" x2="920" y2="340" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#00FF66" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#047857" stop-opacity="0.7"/>
     </linearGradient>
-    <filter id="glow1" x="-20%" y="-20%" width="140%" height="140%">
+    <linearGradient id="slimeBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="60%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+    <filter id="skGlow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="4" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <style>
-      @keyframes floatRing {
-        0%, 100% { transform: rotate(0deg); }
-        50% { transform: rotate(180deg); }
-      }
-      @keyframes pulseCore {
-        0%, 100% { r: 24px; opacity: 0.8; }
-        50% { r: 30px; opacity: 1; }
-      }
-      .ring-anim { transform-origin: 770px 135px; animation: floatRing 12s infinite linear; }
-      .core-anim { animation: pulseCore 3s infinite ease-in-out; }
-    </style>
   </defs>
 
-  <rect x="1" y="1" width="898" height="268" rx="14" fill="url(#cardBg1)" stroke="url(#cardBorder1)" stroke-width="1.5"/>
+  <rect x="1" y="1" width="918" height="338" rx="16" fill="url(#skBg)" stroke="url(#skBorder)" stroke-width="1.5"/>
 
-  <!-- Top Bar / Index & Status -->
-  <g transform="translate(30, 24)">
-    <rect x="0" y="0" width="76" height="22" rx="4" fill="#041f12" stroke="#00FF66" stroke-opacity="0.6"/>
-    <text x="38" y="15" text-anchor="middle" fill="#00FF66" font-family="'Fira Code', monospace" font-size="11" font-weight="700" letter-spacing="1">SYS::01</text>
-    
-    <rect x="88" y="0" width="180" height="22" rx="4" fill="#041f12" stroke="#00F5D4" stroke-opacity="0.5"/>
-    <text x="178" y="15" text-anchor="middle" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="10" font-weight="600" letter-spacing="0.5">IN ACTIVE DEVELOPMENT</text>
+  <!-- Header Strip -->
+  <g transform="translate(32, 26)">
+    <rect x="0" y="0" width="80" height="22" rx="6" fill="#0d2b1f" stroke="#10B981" stroke-opacity="0.4"/>
+    <text x="40" y="15" text-anchor="middle" fill="#34D399" font-family="'Fira Code', monospace" font-size="11" font-weight="700">PROJECT 01</text>
+
+    <rect x="92" y="0" width="168" height="22" rx="6" fill="#0d2b1f" stroke="#34D399" stroke-opacity="0.4"/>
+    <text x="176" y="15" text-anchor="middle" fill="#34D399" font-family="'Inter', sans-serif" font-size="11" font-weight="600">IN ACTIVE DEVELOPMENT</text>
   </g>
 
-  <!-- Project Title & Subtitle -->
-  <text x="30" y="80" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="26" font-weight="800" letter-spacing="-0.5">Skloop</text>
-  <text x="135" y="78" fill="#00FF66" font-family="'Fira Code', monospace" font-size="13" font-weight="600">// Gamified EdTech Platform</text>
-  <text x="30" y="102" fill="#8899A6" font-family="'Inter', sans-serif" font-size="13">Architecting immersive narrative coding worlds with live execution and adaptive guidance.</text>
+  <!-- Title & Subtitle -->
+  <text x="32" y="84" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="28" font-weight="800" letter-spacing="-0.5">Skloop</text>
+  <text x="140" y="82" fill="#34D399" font-family="'Inter', sans-serif" font-size="14" font-weight="600">Gamified EdTech Platform</text>
+  <text x="32" y="110" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="13">Architecting immersive narrative coding worlds with live execution and adaptive AI guidance.</text>
 
-  <!-- Feature Points -->
-  <g transform="translate(30, 130)">
-    <text x="0" y="0" fill="#00FF66" font-family="'Fira Code', monospace" font-size="13" font-weight="700">&gt;&gt;</text>
-    <text x="24" y="0" fill="#E2E8F0" font-family="'Inter', sans-serif" font-size="13" font-weight="600">Loopverse &amp; Underlayer:</text>
-    <text x="200" y="0" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="13">Dual narrative worlds structuring curriculum &amp; hidden hacker puzzles</text>
+  <!-- Features Tree -->
+  <g transform="translate(32, 142)">
+    <!-- Item 1 -->
+    <circle cx="4" cy="4" r="3" fill="#34D399"/>
+    <text x="18" y="8" fill="#F1F5F9" font-family="'Inter', sans-serif" font-size="13" font-weight="600">Loopverse &amp; Underlayer:</text>
+    <text x="185" y="8" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="13">Dual narrative worlds structuring curriculum &amp; hidden hacker puzzles</text>
 
-    <text x="0" y="24" fill="#00FF66" font-family="'Fira Code', monospace" font-size="13" font-weight="700">&gt;&gt;</text>
-    <text x="24" y="24" fill="#E2E8F0" font-family="'Inter', sans-serif" font-size="13" font-weight="600">Loopy AI Companion:</text>
-    <text x="180" y="24" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="13">Dual-personality AI mentor dynamically balancing support &amp; challenge</text>
+    <!-- Item 2 -->
+    <circle cx="4" cy="32" r="3" fill="#34D399"/>
+    <text x="18" y="36" fill="#F1F5F9" font-family="'Inter', sans-serif" font-size="13" font-weight="600">Loopy AI Companion:</text>
+    <text x="165" y="36" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="13">Dynamic dual-personality mentor balancing guided help &amp; code challenges</text>
 
-    <text x="0" y="48" fill="#00FF66" font-family="'Fira Code', monospace" font-size="13" font-weight="700">&gt;&gt;</text>
-    <text x="24" y="48" fill="#E2E8F0" font-family="'Inter', sans-serif" font-size="13" font-weight="600">Progression &amp; Monaco:</text>
-    <text x="195" y="48" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="13">In-browser editor, XP economy, quest branches, and virtual gear shop</text>
+    <!-- Item 3 -->
+    <circle cx="4" cy="60" r="3" fill="#34D399"/>
+    <text x="18" y="64" fill="#F1F5F9" font-family="'Inter', sans-serif" font-size="13" font-weight="600">Progression &amp; Monaco:</text>
+    <text x="180" y="64" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="13">In-browser IDE environment, XP loops, quest branches, and gear shop</text>
   </g>
 
-  <!-- Bottom Tech Stack Pills -->
-  <g transform="translate(30, 218)">
-    <rect x="0" y="0" width="70" height="24" rx="12" fill="#0c2518" stroke="#00FF66" stroke-opacity="0.3"/>
-    <text x="35" y="16" text-anchor="middle" fill="#00FF66" font-family="'Fira Code', monospace" font-size="11">Next.js</text>
+  <!-- Tech Pills Row -->
+  <g transform="translate(32, 245)">
+    <rect x="0" y="0" width="74" height="26" rx="13" fill="#0d2a1f" stroke="#10B981" stroke-opacity="0.3"/>
+    <text x="37" y="17" text-anchor="middle" fill="#34D399" font-family="'Fira Code', monospace" font-size="11">Next.js</text>
 
-    <rect x="78" y="0" width="94" height="24" rx="12" fill="#0c2518" stroke="#00FF66" stroke-opacity="0.3"/>
-    <text x="125" y="16" text-anchor="middle" fill="#00FF66" font-family="'Fira Code', monospace" font-size="11">TypeScript</text>
+    <rect x="82" y="0" width="94" height="26" rx="13" fill="#0d2a1f" stroke="#10B981" stroke-opacity="0.3"/>
+    <text x="129" y="17" text-anchor="middle" fill="#34D399" font-family="'Fira Code', monospace" font-size="11">TypeScript</text>
 
-    <rect x="180" y="0" width="70" height="24" rx="12" fill="#0c2518" stroke="#00FF66" stroke-opacity="0.3"/>
-    <text x="215" y="16" text-anchor="middle" fill="#00FF66" font-family="'Fira Code', monospace" font-size="11">Monaco</text>
+    <rect x="184" y="0" width="76" height="26" rx="13" fill="#0d2a1f" stroke="#10B981" stroke-opacity="0.3"/>
+    <text x="222" y="17" text-anchor="middle" fill="#34D399" font-family="'Fira Code', monospace" font-size="11">Monaco</text>
 
-    <rect x="258" y="0" width="84" height="24" rx="12" fill="#0c2518" stroke="#00FF66" stroke-opacity="0.3"/>
-    <text x="300" y="16" text-anchor="middle" fill="#00FF66" font-family="'Fira Code', monospace" font-size="11">AI Agents</text>
+    <rect x="268" y="0" width="86" height="26" rx="13" fill="#0d2a1f" stroke="#10B981" stroke-opacity="0.3"/>
+    <text x="311" y="17" text-anchor="middle" fill="#34D399" font-family="'Fira Code', monospace" font-size="11">AI Agents</text>
 
-    <rect x="350" y="0" width="80" height="24" rx="12" fill="#0c2518" stroke="#00FF66" stroke-opacity="0.3"/>
-    <text x="390" y="16" text-anchor="middle" fill="#00FF66" font-family="'Fira Code', monospace" font-size="11">Supabase</text>
+    <rect x="362" y="0" width="84" height="26" rx="13" fill="#0d2a1f" stroke="#10B981" stroke-opacity="0.3"/>
+    <text x="404" y="17" text-anchor="middle" fill="#34D399" font-family="'Fira Code', monospace" font-size="11">Supabase</text>
   </g>
 
-  <!-- Right Visual: Neon Loop Slime Node -->
-  <g transform="translate(770, 135)">
-    <circle class="ring-anim" cx="0" cy="0" r="60" stroke="#00FF66" stroke-opacity="0.2" stroke-width="1.5" stroke-dasharray="8 6"/>
-    <circle class="ring-anim" cx="0" cy="0" r="42" stroke="#00F5D4" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="16 10"/>
-    <circle class="core-anim" cx="0" cy="0" r="24" fill="#00FF66" fill-opacity="0.2" filter="url(#glow1)"/>
-    <circle cx="0" cy="0" r="14" fill="#00FF66" filter="url(#glow1)"/>
-    <!-- Orbiting nodes -->
-    <circle cx="42" cy="0" r="4" fill="#00F5D4"/>
-    <circle cx="-42" cy="0" r="4" fill="#00FF66"/>
+  <!-- Ownership Meta Line -->
+  <g transform="translate(32, 295)">
+    <text x="0" y="14" fill="#64748B" font-family="'Inter', sans-serif" font-size="12" font-weight="600">ROLE FOCUS: ARCHITECTURE, UI &amp; PRODUCT EXPERIENCE</text>
+    <text x="400" y="14" fill="#10B981" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Explore Repository →</text>
   </g>
 
-  <!-- Role Stamp -->
-  <text x="640" y="235" text-anchor="end" fill="#8899A6" font-family="'Fira Code', monospace" font-size="11">ROLE: ARCHITECTURE &amp; UI</text>
-  <text x="655" y="235" fill="#00FF66" font-family="'Fira Code', monospace" font-size="11">-&gt;</text>
+  <!-- Right Visual: Detailed Mascot Slime "Loopy" + Mini IDE Window -->
+  <g transform="translate(640, 50)">
+    <!-- Mini IDE Window Frame -->
+    <rect x="0" y="30" width="240" height="190" rx="10" fill="#06120e" stroke="#10B981" stroke-opacity="0.4" stroke-width="1.5"/>
+    <path d="M 0 40 C 0 34.477 4.477 30 10 30 L 230 30 C 235.523 30 240 34.477 240 40 L 240 56 L 0 56 Z" fill="#0e2a1e"/>
+    <circle cx="14" cy="43" r="3.5" fill="#ef4444"/>
+    <circle cx="26" cy="43" r="3.5" fill="#eab308"/>
+    <circle cx="38" cy="43" r="3.5" fill="#22c55e"/>
+    <text x="60" y="47" fill="#94A3B8" font-family="'Fira Code', monospace" font-size="10">loopy.agent.ts</text>
+
+    <!-- Syntax Code Lines -->
+    <text x="16" y="80" fill="#34D399" font-family="'Fira Code', monospace" font-size="10">const</text>
+    <text x="52" y="80" fill="#FFFFFF" font-family="'Fira Code', monospace" font-size="10">loopy =</text>
+    <text x="106" y="80" fill="#38bdf8" font-family="'Fira Code', monospace" font-size="10">new</text>
+    <text x="130" y="80" fill="#facc15" font-family="'Fira Code', monospace" font-size="10">Companion({</text>
+
+    <text x="28" y="98" fill="#94A3B8" font-family="'Fira Code', monospace" font-size="10">persona:</text>
+    <text x="82" y="98" fill="#4ade80" font-family="'Fira Code', monospace" font-size="10">'mentor'</text>
+    <text x="136" y="98" fill="#94A3B8" font-family="'Fira Code', monospace" font-size="10">|</text>
+    <text x="148" y="98" fill="#f87171" font-family="'Fira Code', monospace" font-size="10">'tester'</text>
+
+    <text x="28" y="116" fill="#94A3B8" font-family="'Fira Code', monospace" font-size="10">mode:</text>
+    <text x="64" y="116" fill="#4ade80" font-family="'Fira Code', monospace" font-size="10">'adaptive'</text>
+
+    <text x="16" y="134" fill="#facc15" font-family="'Fira Code', monospace" font-size="10">});</text>
+
+    <!-- Mini Quest Badge Box inside IDE -->
+    <rect x="16" y="150" width="208" height="54" rx="6" fill="#0d2b1f" stroke="#34D399" stroke-opacity="0.3"/>
+    <text x="28" y="168" fill="#F8FAFC" font-family="'Inter', sans-serif" font-size="11" font-weight="700">Quest: Defeat Bug Dragon</text>
+    <rect x="28" y="176" width="184" height="6" rx="3" fill="#071b12"/>
+    <rect x="28" y="176" width="138" height="6" rx="3" fill="#34D399" filter="url(#skGlow)"/>
+    <text x="28" y="196" fill="#34D399" font-family="'Fira Code', monospace" font-size="9">+250 XP • Loopverse Tier 2</text>
+
+    <!-- Cute 3D-style Slime Mascot Peeking Out -->
+    <g transform="translate(140, -10)">
+      <!-- Drop Shadow -->
+      <ellipse cx="40" cy="55" rx="35" ry="8" fill="#000000" opacity="0.4"/>
+      <!-- Slime Body -->
+      <path d="M 40 8 C 18 8, 4 28, 4 48 C 4 70, 18 78, 40 78 C 62 78, 76 70, 76 48 C 76 28, 62 8, 40 8 Z" fill="url(#slimeBody)" filter="url(#skGlow)"/>
+      <!-- Glossy Reflection -->
+      <ellipse cx="28" cy="24" rx="14" ry="7" transform="rotate(-30 28 24)" fill="#ffffff" opacity="0.55"/>
+      <ellipse cx="22" cy="18" rx="4" ry="2" fill="#ffffff" opacity="0.75"/>
+      <!-- Cute Eyes -->
+      <ellipse cx="30" cy="45" rx="3.5" ry="5.5" fill="#082315"/>
+      <circle cx="31.5" cy="43.5" r="1.5" fill="#ffffff"/>
+      <ellipse cx="50" cy="45" rx="3.5" ry="5.5" fill="#082315"/>
+      <circle cx="51.5" cy="43.5" r="1.5" fill="#ffffff"/>
+      <!-- Smiling Mouth -->
+      <path d="M 36 53 Q 40 58, 44 53" stroke="#082315" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <!-- Cheeks -->
+      <ellipse cx="24" cy="50" rx="4" ry="2" fill="#ff70a6" opacity="0.45"/>
+      <ellipse cx="56" cy="50" rx="4" ry="2" fill="#ff70a6" opacity="0.45"/>
+      <!-- Small floating drip -->
+      <circle cx="68" cy="20" r="3" fill="#4ade80" opacity="0.8"/>
+      <circle cx="74" cy="12" r="1.5" fill="#34D399" opacity="0.6"/>
+    </g>
+  </g>
 </svg>

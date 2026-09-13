@@ -1,66 +1,82 @@
-<svg width="900" height="180" viewBox="0 0 900 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="920" height="200" viewBox="0 0 920 200" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="sqBg" x1="0" y1="0" x2="900" y2="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#050e0b"/>
-      <stop offset="50%" stop-color="#081813"/>
-      <stop offset="100%" stop-color="#040b08"/>
+    <linearGradient id="sqBg" x1="0" y1="0" x2="920" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#061410"/>
+      <stop offset="50%" stop-color="#091d17"/>
+      <stop offset="100%" stop-color="#050f0b"/>
     </linearGradient>
-    <linearGradient id="sqBorder" x1="0" y1="0" x2="900" y2="180" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#00FF66" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#00F5D4" stop-opacity="0.3"/>
+    <linearGradient id="sqBorder" x1="0" y1="0" x2="920" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#34D399" stop-opacity="0.3"/>
     </linearGradient>
   </defs>
 
-  <rect x="1" y="1" width="898" height="178" rx="12" fill="url(#sqBg)" stroke="url(#sqBorder)" stroke-width="1.5"/>
+  <rect x="1" y="1" width="918" height="198" rx="16" fill="url(#sqBg)" stroke="url(#sqBorder)" stroke-width="1.5"/>
 
-  <!-- Left Side Quest: Swaram -->
-  <g transform="translate(30, 24)">
-    <rect x="0" y="0" width="60" height="20" rx="4" fill="#041b12" stroke="#00FF66" stroke-opacity="0.5"/>
-    <text x="30" y="14" text-anchor="middle" fill="#00FF66" font-family="'Fira Code', monospace" font-size="10" font-weight="700">QUEST 01</text>
+  <!-- Left Quest: Swaram -->
+  <g transform="translate(32, 28)">
+    <rect x="0" y="0" width="70" height="22" rx="6" fill="#0d2b1f" stroke="#10B981" stroke-opacity="0.4"/>
+    <text x="35" y="15" text-anchor="middle" fill="#34D399" font-family="'Fira Code', monospace" font-size="10" font-weight="700">QUEST 01</text>
     
-    <text x="75" y="16" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="17" font-weight="800">Swaram</text>
-    <text x="155" y="15" fill="#00FF66" font-family="'Fira Code', monospace" font-size="12">// Voice Accessibility PWA</text>
+    <text x="82" y="18" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="18" font-weight="800">Swaram</text>
+    <text x="160" y="17" fill="#34D399" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Voice Accessibility PWA</text>
 
-    <text x="0" y="48" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="13">Voice-first form-filling application engineered for blind &amp; low-vision users.</text>
-    <text x="0" y="70" fill="#8899A6" font-family="'Inter', sans-serif" font-size="12">Custom acoustic feedback loops and speech-to-intent field navigation.</text>
+    <text x="0" y="52" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="13">Voice-first form-filling application engineered for blind &amp; low-vision users.</text>
+    <text x="0" y="74" fill="#64748B" font-family="'Inter', sans-serif" font-size="12">Custom acoustic feedback loops and speech-to-intent field navigation.</text>
 
-    <!-- Tags -->
-    <g transform="translate(0, 96)">
-      <rect x="0" y="0" width="70" height="22" rx="11" fill="#0b2419" stroke="#00FF66" stroke-opacity="0.3"/>
-      <text x="35" y="15" text-anchor="middle" fill="#00FF66" font-family="'Fira Code', monospace" font-size="10">Voice UI</text>
-      
-      <rect x="76" y="0" width="50" height="22" rx="11" fill="#0b2419" stroke="#00FF66" stroke-opacity="0.3"/>
-      <text x="101" y="15" text-anchor="middle" fill="#00FF66" font-family="'Fira Code', monospace" font-size="10">PWA</text>
+    <!-- Waveform Visualizer -->
+    <g transform="translate(0, 95)">
+      <rect x="0" y="8" width="4" height="16" rx="2" fill="#34D399"/>
+      <rect x="8" y="2" width="4" height="28" rx="2" fill="#34D399"/>
+      <rect x="16" y="6" width="4" height="20" rx="2" fill="#34D399"/>
+      <rect x="24" y="0" width="4" height="32" rx="2" fill="#34D399"/>
+      <rect x="32" y="4" width="4" height="24" rx="2" fill="#34D399"/>
+      <rect x="40" y="10" width="4" height="12" rx="2" fill="#34D399"/>
 
-      <rect x="132" y="0" width="94" height="22" rx="11" fill="#0b2419" stroke="#00FF66" stroke-opacity="0.3"/>
-      <text x="179" y="15" text-anchor="middle" fill="#00FF66" font-family="'Fira Code', monospace" font-size="10">Accessibility</text>
+      <g transform="translate(60, 4)">
+        <rect x="0" y="0" width="76" height="24" rx="12" fill="#0d2a1e" stroke="#10B981" stroke-opacity="0.3"/>
+        <text x="38" y="16" text-anchor="middle" fill="#34D399" font-family="'Fira Code', monospace" font-size="10">Voice UI</text>
+
+        <rect x="82" y="0" width="56" height="24" rx="12" fill="#0d2a1e" stroke="#10B981" stroke-opacity="0.3"/>
+        <text x="110" y="16" text-anchor="middle" fill="#34D399" font-family="'Fira Code', monospace" font-size="10">PWA</text>
+
+        <rect x="144" y="0" width="96" height="24" rx="12" fill="#0d2a1e" stroke="#10B981" stroke-opacity="0.3"/>
+        <text x="192" y="16" text-anchor="middle" fill="#34D399" font-family="'Fira Code', monospace" font-size="10">Accessibility</text>
+      </g>
     </g>
   </g>
 
-  <!-- Divider -->
-  <line x1="450" y1="20" x2="450" y2="160" stroke="#00FF66" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="4 4"/>
+  <!-- Center Divider -->
+  <line x1="460" y1="25" x2="460" y2="175" stroke="#10B981" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="3 3"/>
 
-  <!-- Right Side Quest: Operation Vault -->
-  <g transform="translate(480, 24)">
-    <rect x="0" y="0" width="60" height="20" rx="4" fill="#041b17" stroke="#00F5D4" stroke-opacity="0.5"/>
-    <text x="30" y="14" text-anchor="middle" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="10" font-weight="700">QUEST 02</text>
+  <!-- Right Quest: Operation Vault -->
+  <g transform="translate(490, 28)">
+    <rect x="0" y="0" width="70" height="22" rx="6" fill="#0d2b1f" stroke="#34D399" stroke-opacity="0.4"/>
+    <text x="35" y="15" text-anchor="middle" fill="#34D399" font-family="'Fira Code', monospace" font-size="10" font-weight="700">QUEST 02</text>
     
-    <text x="75" y="16" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="17" font-weight="800">Operation Vault</text>
-    <text x="215" y="15" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="12">// Induction Puzzle</text>
+    <text x="82" y="18" fill="#FFFFFF" font-family="'Inter', sans-serif" font-size="18" font-weight="800">Operation Vault</text>
+    <text x="215" y="17" fill="#34D399" font-family="'Inter', sans-serif" font-size="12" font-weight="600">Induction Challenge</text>
 
-    <text x="0" y="48" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="13">Mobile-first interactive crypto/logic puzzle game for the CSI induction event.</text>
-    <text x="0" y="70" fill="#8899A6" font-family="'Inter', sans-serif" font-size="12">Multi-tier cipher mechanics, rapid live event scoring, and team puzzle gates.</text>
+    <text x="0" y="52" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="13">Mobile-first interactive crypto/logic puzzle game for the CSI induction event.</text>
+    <text x="0" y="74" fill="#64748B" font-family="'Inter', sans-serif" font-size="12">Multi-tier cipher mechanics, rapid live event scoring, and puzzle gates.</text>
 
-    <!-- Tags -->
-    <g transform="translate(0, 96)">
-      <rect x="0" y="0" width="90" height="22" rx="11" fill="#07241e" stroke="#00F5D4" stroke-opacity="0.3"/>
-      <text x="45" y="15" text-anchor="middle" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="10">Mobile-First</text>
+    <!-- Vault Dial Visual -->
+    <g transform="translate(0, 95)">
+      <circle cx="16" cy="14" r="14" stroke="#34D399" stroke-width="2" fill="#0d2a1e"/>
+      <circle cx="16" cy="14" r="5" fill="#34D399"/>
+      <line x1="16" y1="2" x2="16" y2="7" stroke="#34D399" stroke-width="2"/>
+      <line x1="16" y1="21" x2="16" y2="26" stroke="#34D399" stroke-width="2"/>
 
-      <rect x="96" y="0" width="80" height="22" rx="11" fill="#07241e" stroke="#00F5D4" stroke-opacity="0.3"/>
-      <text x="136" y="15" text-anchor="middle" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="10">CSI Event</text>
+      <g transform="translate(45, 4)">
+        <rect x="0" y="0" width="94" height="24" rx="12" fill="#0d2a1e" stroke="#34D399" stroke-opacity="0.3"/>
+        <text x="47" y="16" text-anchor="middle" fill="#34D399" font-family="'Fira Code', monospace" font-size="10">Mobile-First</text>
 
-      <rect x="182" y="0" width="90" height="22" rx="11" fill="#07241e" stroke="#00F5D4" stroke-opacity="0.3"/>
-      <text x="227" y="15" text-anchor="middle" fill="#00F5D4" font-family="'Fira Code', monospace" font-size="10">Puzzle Logic</text>
+        <rect x="100" y="0" width="80" height="24" rx="12" fill="#0d2a1e" stroke="#34D399" stroke-opacity="0.3"/>
+        <text x="140" y="16" text-anchor="middle" fill="#34D399" font-family="'Fira Code', monospace" font-size="10">CSI Event</text>
+
+        <rect x="186" y="0" width="94" height="24" rx="12" fill="#0d2a1e" stroke="#34D399" stroke-opacity="0.3"/>
+        <text x="233" y="16" text-anchor="middle" fill="#34D399" font-family="'Fira Code', monospace" font-size="10">Puzzle Logic</text>
+      </g>
     </g>
   </g>
 </svg>
