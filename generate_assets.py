@@ -1,4 +1,5 @@
 import os
+from PIL import Image, ImageDraw, ImageFont
 
 def create_proper_cards():
     os.makedirs('assets/cards', exist_ok=True)
@@ -110,5 +111,62 @@ def create_proper_cards():
             f.write(svg)
         print(f"Generated assets/cards/{c['filename']}.svg")
 
+def create_ascii_portrait():
+    if not os.path.exists('picture.txt'):
+        return
+
+    with open('picture.txt') as f:
+        lines = [l.rstrip('\n\r') for l in f.readlines()]
+
+    font_path = '/System/Library/Fonts/Menlo.ttc'
+    if not os.path.exists(font_path):
+        font_path = '/System/Library/Fonts/Monaco.dfont'
+    if not os.path.exists(font_path):
+        font_path = '/System/Library/Fonts/Courier.dfont'
+
+    font_size = 11
+    font = ImageFont.truetype(font_path, font_size)
+
+    char_w = font.getlength('M')
+    line_h = 12.2
+
+    content_w = int(180 * char_w)
+    content_h = int(len(lines) * line_h)
+
+    pad_x = 24
+    pad_top = 44
+    pad_bot = 20
+
+    total_w = content_w + pad_x * 2
+    total_h = content_h + pad_top + pad_bot
+
+    img = Image.new('RGBA', (total_w, total_h), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(img)
+
+    draw.rounded_rectangle([0, 0, total_w - 1, total_h - 1], radius=14, fill='#07120e', outline='#10B981', width=2)
+    draw.rounded_rectangle([0, 0, total_w - 1, 38], radius=14, fill='#0d261b', outline='#10B981', width=2)
+    draw.rectangle([0, 24, total_w - 1, 38], fill='#0d261b')
+    draw.line([(0, 38), (total_w - 1, 38)], fill='#10B981', width=1)
+
+    draw.ellipse([18, 13, 28, 23], fill='#ef4444')
+    draw.ellipse([34, 13, 44, 23], fill='#eab308')
+    draw.ellipse([50, 13, 60, 23], fill='#22c55e')
+
+    title_font = ImageFont.truetype(font_path, 11)
+    draw.text((76, 12), 'tejaskm-dev ~ cat picture.txt', font=title_font, fill='#94A3B8')
+
+    matrix_text = '180 x 101 MATRIX'
+    m_len = title_font.getlength(matrix_text)
+    draw.rounded_rectangle([total_w - m_len - 36, 9, total_w - 18, 29], radius=4, fill='#05150e', outline='#10B981', width=1)
+    draw.text((total_w - m_len - 27, 12), matrix_text, font=title_font, fill='#34D399')
+
+    for i, l in enumerate(lines):
+        y = int(pad_top + i * line_h)
+        draw.text((pad_x, y), l, font=font, fill='#22c55e')
+
+    img.save('assets/ascii_portrait.png', 'PNG')
+    print('Generated assets/ascii_portrait.png')
+
 if __name__ == '__main__':
     create_proper_cards()
+    create_ascii_portrait()

@@ -46,6 +46,10 @@ I treat repetitive boilerplate as an artifact of legacy development. Instead, I 
 - **Deep Code Literacy**: Staying deeply conversant with language semantics, AST transformations, event loops, and relational schemas to debug complex race conditions and evaluate architectural trade-offs.
 - **Velocity with Taste**: AI accelerates execution speed; human taste, disciplined product intuition, and rigorous systems design determine product excellence.
 
+<p align="center">
+  <img src="./assets/ascii_portrait.png" width="560" alt="Tejas K M ASCII Portrait" />
+</p>
+
 ---
 
 ### Featured Projects
