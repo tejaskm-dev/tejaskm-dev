@@ -703,6 +703,60 @@ def generate_all():
         with open(f'assets/headers/{filename}', 'w') as f:
             f.write(svg)
 
+    # 8. ASCII PORTRAIT TERMINAL
+    if os.path.exists('picture.txt'):
+        import xml.sax.saxutils as saxutils
+        with open('picture.txt') as f:
+            lines = f.readlines()
+        escaped_lines = [saxutils.escape(l.rstrip('\n\r')) for l in lines]
+        char_w = 4.8
+        line_h = 8.2
+        start_x = 28
+        start_y = 65
+        width = 920
+        height = int(len(lines) * line_h + 85)
+
+        svg_parts = [
+            f'<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" fill="none" xmlns="http://www.w3.org/2000/svg">',
+            '  <defs>',
+            '    <linearGradient id="termBg" x1="0" y1="0" x2="0" y2="1">',
+            '      <stop offset="0%" stop-color="#050f0b"/>',
+            '      <stop offset="100%" stop-color="#081711"/>',
+            '    </linearGradient>',
+            '    <linearGradient id="termBorder" x1="0" y1="0" x2="920" y2="920" gradientUnits="userSpaceOnUse">',
+            '      <stop offset="0%" stop-color="#10B981" stop-opacity="0.7"/>',
+            '      <stop offset="50%" stop-color="#34D399" stop-opacity="0.2"/>',
+            '      <stop offset="100%" stop-color="#059669" stop-opacity="0.7"/>',
+            '    </linearGradient>',
+            '    <filter id="phosphorGlow" x="-10%" y="-10%" width="120%" height="120%">',
+            '      <feGaussianBlur stdDeviation="0.6" result="blur"/>',
+            '      <feMerge>',
+            '        <feMergeNode in="blur"/>',
+            '        <feMergeNode in="SourceGraphic"/>',
+            '      </feMerge>',
+            '    </filter>',
+            '  </defs>',
+            f'  <rect x="1" y="1" width="{width - 2}" height="{height - 2}" rx="14" fill="url(#termBg)" stroke="url(#termBorder)" stroke-width="1.5"/>',
+            f'  <path d="M 1 14 C 1 6.82 6.82 1 14 1 L {width - 14} 1 C {width - 6.82} 1 {width - 1} 6.82 {width - 1} 14 L {width - 1} 38 L 1 38 Z" fill="#0a2218" fill-opacity="0.8"/>',
+            f'  <line x1="1" y1="38" x2="{width - 1}" y2="38" stroke="#10B981" stroke-opacity="0.25" stroke-width="1"/>',
+            '  <circle cx="22" cy="19" r="4.5" fill="#ef4444"/>',
+            '  <circle cx="36" cy="19" r="4.5" fill="#eab308"/>',
+            '  <circle cx="50" cy="19" r="4.5" fill="#22c55e"/>',
+            '  <text x="72" y="23" fill="#94A3B8" font-family="\'Fira Code\', monospace" font-size="11" font-weight="600">shinz@asiet ~ cat portrait.ascii</text>',
+            f'  <rect x="{width - 160}" y="9" width="145" height="20" rx="4" fill="#05150e" stroke="#10B981" stroke-opacity="0.3"/>',
+            f'  <text x="{width - 88}" y="23" text-anchor="middle" fill="#34D399" font-family="\'Fira Code\', monospace" font-size="10" font-weight="600">180 x 101 MATRIX</text>',
+            f'  <g font-family="\'Courier New\', monospace" font-size="7.5px" font-weight="600" fill="#34D399" filter="url(#phosphorGlow)" xml:space="preserve">'
+        ]
+        for i, l in enumerate(escaped_lines):
+            y = start_y + i * line_h
+            svg_parts.append(f'    <text x="{start_x}" y="{y:.1f}">{l}</text>')
+        svg_parts.append('  </g>')
+        svg_parts.append('</svg>')
+
+        with open('assets/ascii-portrait.svg', 'w') as out:
+            out.write('\n'.join(svg_parts))
+        print("Generated assets/ascii-portrait.svg")
+
     print("All assets generated successfully!")
 
 if __name__ == '__main__':

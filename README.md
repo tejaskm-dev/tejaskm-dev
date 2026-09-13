@@ -54,6 +54,12 @@ I treat repetitive boilerplate as an artifact of legacy development. Instead, I 
 
 <br/>
 
+<p align="center">
+  <img src="./assets/ascii-portrait.svg" width="100%" alt="Shinz ASCII Terminal Portrait" />
+</p>
+
+<br/>
+
 <!-- SECTION 02: FEATURED SYSTEMS & ENGINES -->
 <p align="center">
   <img src="./assets/headers/header-projects.svg" width="100%" alt="02 • Featured Systems &amp; Engines" />
