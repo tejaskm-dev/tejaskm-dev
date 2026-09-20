@@ -36,7 +36,7 @@
     <g transform="translate(0, 102)">
       <!-- Box 1: Commits / Contributions -->
       <rect x="0" y="0" width="110" height="56" rx="10" fill="#152119" stroke="#1e3226"/>
-      <text x="55" y="26" text-anchor="middle" fill="#34D399" font-family="'Inter', sans-serif" font-size="18" font-weight="900">766+</text>
+      <text x="55" y="26" text-anchor="middle" fill="#34D399" font-family="'Inter', sans-serif" font-size="18" font-weight="900">769+</text>
       <text x="55" y="44" text-anchor="middle" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="9" font-weight="600">CONTRIBUTIONS</text>
 
       <!-- Box 2: PRs -->
@@ -51,7 +51,7 @@
 
       <!-- Box 4: Top Syntax -->
       <rect x="360" y="0" width="110" height="56" rx="10" fill="#152119" stroke="#1e3226"/>
-      <text x="415" y="26" text-anchor="middle" fill="#34D399" font-family="'Inter', sans-serif" font-size="16" font-weight="900">73% TS</text>
+      <text x="415" y="26" text-anchor="middle" fill="#34D399" font-family="'Inter', sans-serif" font-size="16" font-weight="900">74% TS</text>
       <text x="415" y="44" text-anchor="middle" fill="#94A3B8" font-family="'Inter', sans-serif" font-size="9" font-weight="600">CORE SYNTAX</text>
     </g>
 
