@@ -49,15 +49,7 @@
       <p>
         My north star is <b>technical product leadership with end-to-end ownership</b> — designing, directing, and shipping resilient software ventures that solve high-friction human problems.
       </p>
-      <h4>Directing AI Tooling</h4>
-      <p>
-        I treat repetitive boilerplate as an artifact of legacy development. Instead, I direct high-leverage AI tooling (<b>Claude Code</b>, <b>Antigravity</b>, <b>Groq / Llama</b>):
-      </p>
-      <ul>
-        <li><b>Architecture First</b>: Defining state boundaries, schemas, and protocol contracts before triggering generation loops.</li>
-        <li><b>Deep Code Literacy</b>: Staying deeply conversant with language semantics, AST transformations, event loops, and query plans to evaluate architectural trade-offs.</li>
-        <li><b>Velocity with Taste</b>: Speed via AI; human taste, product intuition, and disciplined systems design determine product excellence.</li>
-      </ul>
+      
     </td>
     <td width="42%" valign="middle" align="center">
       <img src="./assets/ascii_portrait.png" width="100%" alt="Tejas K M ASCII Portrait" />
