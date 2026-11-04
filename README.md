@@ -49,7 +49,6 @@
       <p>
         My north star is <b>technical product leadership with end-to-end ownership</b> — designing, directing, and shipping resilient software ventures that solve high-friction human problems.
       </p>
-      
     </td>
     <td width="42%" valign="middle" align="center">
       <img src="./assets/ascii_portrait.png" width="100%" alt="Tejas K M ASCII Portrait" />
